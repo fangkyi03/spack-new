@@ -17,6 +17,22 @@ export default function Index() {
 
 ```
 
+# config.js
+这个文件类似于webpack的配置文件 里面是这个框架的初始化环境 目前参数不多 后续会添加
+其中有一个需要注意的地
+```javascript
+  depend:{
+    'antd':{
+      'js':'https://cdn.bootcdn.net/ajax/libs/antd/4.7.0/antd.min.js',
+      'css':'https://cdn.bootcdn.net/ajax/libs/antd/4.7.0/antd.min.css'
+    },
+    'dayjs':'https://cdn.bootcdn.net/ajax/libs/dayjs/1.4.1/dayjs.min.js',
+    'moment':'https://cdn.bootcdn.net/ajax/libs/moment.js/1.0.0/moment.min.js'
+  }
+  这里有两种不同的写法 直接写字符串的话 默认只能加载js文件 
+  如果是又有js又有css的话 请使用上面那种
+```
+
 # 使用说明
 ```javascript
   // 启动
