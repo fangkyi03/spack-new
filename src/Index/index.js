@@ -1,12 +1,9 @@
 import React from 'react'
-import {Button} from 'antd'
-import A from './a'
+import {Button, Select} from 'antd'
+import './index.less'
 export default function Index() {
   return (
-    <div>
-      12111
-      <Button>12313</Button>
-      <A/>
+    <div className='main'>
     </div>
   )
 }

@@ -34,21 +34,25 @@ function scanImport(dirPath,isRoot = false) {
       const {source,specifiers} = path.node
       const {value} = source
       if (value.indexOf('.') == -1) {
-        if (value == 'react') {
-          imports.depend.push(value)
+        imports.depend.push(value)
+        const names = specifiers.map((e) => e.local.name)
+        const isDefault = specifiers.some((e) => e.type == 'ImportDefaultSpecifier')
+        if (isDefault) {
           path.remove()
-        }else {
-          imports.depend.push(value)
-          const names = specifiers.map((e)=> e.local.name)
-          const constTemplate = babel.template('const {%%define%%} = %%name%%'.replace('%%name%%', value).replace('%%define%%',names.join(',')))
+        } else {
+          const constTemplate = babel.template('const {%%define%%} = %%name%%'.replace('%%name%%', value).replace('%%define%%', names.join(',')))
           path.replaceWith(constTemplate())
         }
       }else {
         const localPath = p.join(dirPath, '../', getExt(value))
         imports.local.push(localPath)
-        const ret = scanImport(localPath)
-        imports.depend = imports.depend.concat(ret.depend)
-        imports.local = imports.local.concat(ret.local)
+        if (p.extname(localPath) == '.js') {
+          const ret = scanImport(localPath)
+          imports.depend = imports.depend.concat(ret.depend)
+          imports.local = imports.local.concat(ret.local)
+        }else {
+          cache.add(localPath,fs.readFileSync(localPath,'utf-8'))
+        }
         path.remove()
       }
     },

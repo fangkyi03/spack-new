@@ -10,7 +10,7 @@
 module.exports = {
   rootPath:'src',
   port:8000,
-  // isOpen:true,
+  isOpen:true,
   mode:'dev',
   alias:{
     '@':'',
@@ -24,8 +24,10 @@ module.exports = {
   },
   depend:{
     'antd':{
-      'js':'https://img3.nongbaxian.com.cn/ndcdn/antd.min.js',
-      'css':'https://img3.nongbaxian.com.cn/ndcdn/antd.css'
+      'js':'https://cdn.bootcdn.net/ajax/libs/antd/4.7.0/antd.min.js',
+      'css':'https://cdn.bootcdn.net/ajax/libs/antd/4.7.0/antd.min.css'
     },
+    'dayjs':'https://cdn.bootcdn.net/ajax/libs/dayjs/1.4.1/dayjs.min.js',
+    'moment':'https://cdn.bootcdn.net/ajax/libs/moment.js/1.0.0/moment.min.js'
   }
 }

@@ -8,16 +8,36 @@ const template = require('./template')
 const mime = require('mime-types')
 const etag = require('etag')
 const cache = require('./cache')
+const chokidar = require('chokidar')
+const WebSocketServer = require('ws').Server
 
 class Server {
   constructor(config) {
     this.config = config
+    this.bindWatch()
+  }
+
+  bindWatch() {
+    this.wss = new WebSocketServer({ port: 8001 });
+    this.wss.on('connection', (wss) => {
+      const watch = chokidar.watch('src', {
+        // ignored: config.exclude,
+        persistent: true,
+        ignoreInitial: true,
+        disableGlobbing: false
+      })
+      watch.once('change', (filePath) => {
+        console.log('发生文件变动')
+        wss.send('reload')
+        console.log('更新完成')
+      })
+    })
   }
 
   start() {
     const {port = 3000,isOpen = false } = this.config
     app.listen(port, () => console.log(`服务已启动 端口号:${port}!`))
-    app.get('*', (req, res) => this._serverCallBack(req, res))
+    app.all('*', (req, res) => this._serverCallBack(req, res))
     isOpen && open(`http://127.0.0.1:${port}`)
   }
 

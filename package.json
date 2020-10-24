@@ -2,7 +2,6 @@
   "name": "ztesa-new-web-pack",
   "version": "1.0.0",
   "description": "",
-  "main": "a.js",
   "scripts": {
     "dev": "node ./spack"
   },
@@ -16,12 +15,15 @@
     "@babel/traverse": "^7.12.1",
     "@babel/types": "^7.12.1",
     "@types/antd": "^1.0.0",
+    "chokidar": "^3.4.3",
     "etag": "^1.8.1",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
     "mime-types": "^2.1.27",
     "nodejs-websocket": "^1.7.2",
     "open": "^7.3.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "watch": "^1.0.2",
+    "ws": "^7.3.1"
   }
 }
