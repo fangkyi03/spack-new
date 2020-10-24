@@ -34,9 +34,9 @@ function getEmptyHTMLTemplate() {
 // 注入前
 function getBeforeInjection () {
   return [
-    '<script crossorigin src="https://cdn.bootcdn.net/ajax/libs/babel-core/4.0.1/browser.min.js"></script>',
+    '<script crossorigin src="https://cdn.bootcdn.net/ajax/libs/babel-core/5.6.20/browser.min.js"></script>',
     '<script crossorigin src="https://cdn.bootcdn.net/ajax/libs/react/16.14.0/umd/react.production.min.js"></script>',
-    '<script crossorigin src="https://cdn.bootcdn.net/ajax/libs/react-dom/0.0.0-0c756fb-f7f79fd/umd/react-dom.production.min.js"></script>'
+    '<script crossorigin src="https://cdn.bootcdn.net/ajax/libs/react-dom/16.14.0/umd/react-dom.production.min.js"></script>'
   ].join('\n')
 }
 

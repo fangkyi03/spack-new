@@ -1,8 +1,12 @@
 import React from 'react'
-import {Button, Input, Select, Switch} from 'antd'
 import './index.less'
+import A from './a'
+import { Button } from 'antd'
 export default function Index() {
   return (
-    <Input placeholder='测试'></Input>
+    <div>
+      <Button>1231</Button>
+      <A/>
+    </div>
   )
 }
