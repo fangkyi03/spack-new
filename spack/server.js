@@ -7,6 +7,7 @@ const p = require('path')
 const template = require('./template')
 const mime = require('mime-types')
 const etag = require('etag')
+const cache = require('./cache')
 
 class Server {
   constructor(config) {
@@ -37,12 +38,17 @@ class Server {
     const { rootPath = 'src', depend = {}} = this.config
     // 如果不是文件 而是路径的话 则直接加载路径
     if (req.url.indexOf('.') == -1) {
-      const path = p.join(rootPath, tool.getFileName(req.url))
+      const path = p.join(rootPath, tool.getFileName(req.url),'index.js')
       if (fs.existsSync(path)) {
-        const imports = tool.scanImport(p.join(path,'index.js'))
+        const imports = tool.scanImport(path,true)
+        imports.local.unshift(path)
         const html = template.getHTMLTemplate(imports,depend)
-        res.send(html)
+        return res.send(html)
       }
+    } else if (req.url !== '/favicon.ico'){
+      return this.sendHTML(cache.get(req.url.slice(1)),res)
+    }else {
+      return this.sendHTML('',res)
     }
   }
 }

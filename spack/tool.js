@@ -16,7 +16,7 @@ function getFileName(path) {
 }
 
 // 扫描依赖
-function scanImport(dirPath) {
+function scanImport(dirPath,isRoot = false) {
   const imports = {
     // 依赖
     depend:[],
@@ -26,31 +26,43 @@ function scanImport(dirPath) {
   const context = fs.readFileSync(dirPath,'utf-8')
   const tranform = babel.transform(context)
   const ast = babel.parseSync(tranform.code)
-  const depend = cache.getDepend(dirPath)
   const nameTemplate = babel.template(`window.%%name%% = %%name%%`)
-  if (depend) return depend
+  const reactDOM = babel.template(`ReactDOM.render(React.createElement(%%name%%,{},{}),document.getElementById('root'))`)
   let name = ''
   traverse(ast,{
     ImportDeclaration(path) {
-      const {source} = path.node
+      const {source,specifiers} = path.node
       const {value} = source
       if (value.indexOf('.') == -1) {
-        imports.depend.push(value)
+        if (value == 'react') {
+          imports.depend.push(value)
+          path.remove()
+        }else {
+          imports.depend.push(value)
+          const names = specifiers.map((e)=> e.local.name)
+          const constTemplate = babel.template('const {%%define%%} = %%name%%'.replace('%%name%%', value).replace('%%define%%',names.join(',')))
+          path.replaceWith(constTemplate())
+        }
       }else {
         const localPath = p.join(dirPath, '../', getExt(value))
         imports.local.push(localPath)
         const ret = scanImport(localPath)
         imports.depend = imports.depend.concat(ret.depend)
         imports.local = imports.local.concat(ret.local)
+        path.remove()
       }
-      path.remove()
     },
     ExportDefaultDeclaration(path) {
       const {declaration} = path.node
       const {id} = declaration
       const {name} = id
       path.replaceWith(declaration)
-      path.parent.body.push(nameTemplate({ name: types.identifier(name)}))
+      if (isRoot) {
+        path.parent.body.push(nameTemplate({ name: types.identifier(name) }))
+        path.parent.body.push(reactDOM({ name: types.identifier(name) }))
+      }else {
+        path.parent.body.push(nameTemplate({ name: types.identifier(name) }))
+      }
     }
   })
   const text = babel.transformFromAstSync(ast, tranform.code)

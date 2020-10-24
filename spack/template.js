@@ -1,4 +1,5 @@
-//
+const p = require('path')
+
 // 获取空白HTML模板
 function getEmptyHTMLTemplate() {
   return `
@@ -8,9 +9,10 @@ function getEmptyHTMLTemplate() {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
+      <script crossorigin src="https://img3.nongbaxian.com.cn/ndcdn/browser.min.js"></script>
       <script crossorigin src="https://img3.nongbaxian.com.cn/ndcdn/react.production.min.js"></script>
       <script crossorigin src="https://img3.nongbaxian.com.cn/ndcdn/react-dom.production.min.js"></script>
-      <script src="https://img3.nongbaxian.com.cn/ndcdn/browser.min.js"></script>
+      <link rel="icon" href="data:image/ico;base64,aWNv">
       %%%script_link%%%
     </head>
     <body>
@@ -35,7 +37,16 @@ function getHTMLTemplate(imports, depend,local) {
 
 // 获取本地文件列表
 function getLocalList(local) {
-
+  return local.reverse().map((e)=>{
+    const ext = p.extname(e)
+    switch (ext) {
+      case '.js':
+        return createScript(e)
+      case '.css':
+      case '.less':
+        return createLink(e)
+    }
+  })
 }
 
 // 获取依赖列表
@@ -45,12 +56,12 @@ function getDependList(dependArr,depend) {
     const item = depend[e]
     let ret = ''
     if (typeof item == 'string') {
-      ret = createScriptOrLink(item, 'script')
+      ret = createScriptOrLink(item, 'script', true)
       list.pus(ret)
     }else if (typeof item == 'object') {
       Object.keys(item).forEach((el)=>{
         if (el == 'js') {
-          ret = createScriptOrLink(item[el], 'script')
+          ret = createScriptOrLink(item[el], 'script',true)
           list.push(ret)
         }else {
           ret = createScriptOrLink(item[el], 'link')
@@ -63,8 +74,8 @@ function getDependList(dependArr,depend) {
 }
 
 // 创建脚本
-function createScript(path) {
-  return `<script type='text/babel' src='${path}'></script>`
+function createScript(path,isDepend = false) {
+  return `<script type=${isDepend ? 'text/javascript' : 'text/babel'} src='${path}'></script>`
 }
 
 // 创建引入
@@ -73,10 +84,10 @@ function createLink(path) {
 }
 
 // 创建脚本或者css
-function createScriptOrLink(path,type) {
+function createScriptOrLink(path, type, isDepend) {
   switch (type) {
     case 'script':
-      return createScript(path)
+      return createScript(path, isDepend)
     case 'link':
       return createLink(path)
     default:

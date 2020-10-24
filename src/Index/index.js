@@ -1,10 +1,12 @@
 import React from 'react'
 import {Button} from 'antd'
+import A from './a'
 export default function Index() {
   return (
     <div>
-      123123123
-      <Button type='primary'>1231231</Button>
+      12111
+      <Button>12313</Button>
+      <A/>
     </div>
   )
 }
