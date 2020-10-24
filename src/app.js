@@ -1,8 +1,9 @@
-function app() {
+import React from 'react'
+
+export default function App() {
   return (
     <div>
-      121212
+      1212
     </div>
   )
 }
-window.App = app
