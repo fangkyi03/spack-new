@@ -58,7 +58,7 @@ class Server {
     const { rootPath = 'src', depend = {}} = this.config
     // 如果不是文件 而是路径的话 则直接加载路径
     if (req.url.indexOf('.') == -1) {
-      const path = p.join(rootPath, tool.getFileName(req.url),'index.js')
+      const path = p.join(tool.getFilePath(rootPath,req.url))
       if (fs.existsSync(path)) {
         const imports = tool.scanImport(path,true)
         imports.local.unshift(path)

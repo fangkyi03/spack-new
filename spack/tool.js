@@ -15,6 +15,18 @@ function getFileName(path) {
   }
 }
 
+// 获取文件路径
+function getFilePath(path,url) {
+  const filePath = p.join(path,getFileName(url))
+  const react = p.join(filePath,'index.js')
+  const vue = p.join(filePath,'index.vue')
+  if (fs.existsSync(react)) {
+    return react
+  }else {
+    return vue
+  }
+}
+
 // 扫描依赖
 function scanImport(dirPath,isRoot = false) {
   const imports = {
@@ -28,7 +40,6 @@ function scanImport(dirPath,isRoot = false) {
   const ast = babel.parseSync(tranform.code)
   const nameTemplate = babel.template(`window.%%name%% = %%name%%`)
   const reactDOM = babel.template(`ReactDOM.render(React.createElement(%%name%%,{},{}),document.getElementById('root'))`)
-  let name = ''
   traverse(ast,{
     ImportDeclaration(path) {
       const {source,specifiers} = path.node
@@ -90,5 +101,7 @@ module.exports = {
   // 扫描依赖
   scanImport,
   // 获取文件后缀格式 默认为js
-  getExt
+  getExt,
+  // 获取文件路径
+  getFilePath
 }

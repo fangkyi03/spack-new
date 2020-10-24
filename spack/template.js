@@ -11,6 +11,7 @@ function getEmptyHTMLTemplate() {
       <title>Document</title>
       <link rel="icon" href="data:image/ico;base64,aWNv">
       <script crossorigin src="https://cdn.bootcdn.net/ajax/libs/moment.js/1.0.0/moment.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
       %%%before_injection%%%
       %%%script_link%%%
       %%%after_injection%%%

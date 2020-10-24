@@ -10,7 +10,7 @@
 module.exports = {
   rootPath:'src',
   port:8000,
-  isOpen:true,
+  // isOpen:true,
   mode:'dev',
   alias:{
     '@':'',
