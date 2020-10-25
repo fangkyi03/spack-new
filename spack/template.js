@@ -7,8 +7,8 @@ function getEmptyHTMLTemplate() {
     <html lang="en">
     <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
       <link rel="icon" href="data:image/ico;base64,aWNv">
       <script crossorigin src="https://cdn.bootcdn.net/ajax/libs/moment.js/1.0.0/moment.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
@@ -43,7 +43,7 @@ function getBeforeInjection () {
 // 注入后
 function getAfterInjection() {
   return [
-    '<script src="https://cdn.bootcdn.net/ajax/libs/less.js/1.0.41/less-1.0.41.min.js"></script>',
+  '<script src="https://cdn.bootcdn.net/ajax/libs/less.js/3.9.0/less.min.js"></script>',
   ].join('\n')
 }
 

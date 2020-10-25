@@ -1,12 +1,12 @@
 import React from 'react'
 import './index.less'
 import A from './a'
-import { Button } from 'antd'
+import { Button, Radio } from 'antd'
 export default function Index() {
+  const [text,setText] = React.useState(Math.random() * 1000)
   return (
-    <div>
-      <Button>1231</Button>
-      <A/>
+    <div onClick={()=>setText(Math.random() * 1000)}>
+      <A text={text}></A>
     </div>
   )
 }
