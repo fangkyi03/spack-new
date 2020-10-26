@@ -106,6 +106,11 @@ function getDependList(dependArr,depend) {
     if (typeof item == 'string') {
       ret = createScriptOrLink(item, 'script', true)
       list.push(ret)
+    }else if (Array.isArray(item)) {
+      item.forEach((el)=>{
+        ret = createScriptOrLink(el, 'script', true)
+        list.push(ret)
+      })
     }else if (typeof item == 'object') {
       Object.keys(item).forEach((el)=>{
         if (el == 'js') {
