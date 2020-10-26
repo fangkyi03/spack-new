@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "node ./spack"
+    "dev": "node ./spack/dev",
+    "build": "node ./spack/build"
   },
   "author": "",
   "license": "ISC",

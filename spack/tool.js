@@ -4,6 +4,8 @@ const traverse = require('@babel/traverse').default
 const fs = require('fs')
 const cache = require('./cache')
 const p = require('path')
+const child = require('child_process')
+const { getBuildHTMLTemplate } = require('./template')
 
 // 获取文件名称
 function getFileName(path) {
@@ -55,7 +57,7 @@ function scanImport(dirPath,isRoot = false) {
           path.replaceWith(constTemplate())
         }
       }else {
-        const localPath = p.join(dirPath, '../', getExt(value))
+        const localPath = getExt(p.join(dirPath, '../', value))
         imports.local.push(localPath)
         if (p.extname(localPath) == '.js') {
           const ret = scanImport(localPath)
@@ -89,10 +91,60 @@ function scanImport(dirPath,isRoot = false) {
 function getExt(path) {
   const ext = p.extname(path)
   if (ext == '') {
-    return path + '.js'
+    const filePath = p.join(path)
+    const jsPath = filePath + '.js'
+    const indexPath = p.join(filePath,'index.js')
+    const files = [jsPath,indexPath]
+    const findResult = files.find((e)=> fs.existsSync(e))
+    return findResult || path
   }else {
     return path
   }
+}
+
+// 创建文件夹
+function mkdir(target,dir) {
+  const dirs = dir.split('/').filter((e)=>e.indexOf('.') == -1)
+  dirs.forEach((e,i)=>{
+    let dirPath = p.join(target,dirs.slice(0, i + 1).join('/'))
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(dirPath)
+    }
+    console.log('')
+  })
+}
+
+// 创建page
+function createPage(path,html) {
+  if (!fs.existsSync(path)) {
+    fs.mkdirSync(path)
+  }
+  fs.writeFileSync(p.join(path,'index.html'),html,'utf-8')
+}
+
+// 遍历指定文件夹
+function traversalFolder(config) {
+  const { rootPath, outPath = 'dist', depend = {}} = config
+  child.execSync('rm -rf ' + outPath)
+  if (!fs.existsSync(outPath)) {
+    fs.mkdirSync(outPath)
+    fs.mkdirSync(outPath + '/static')
+  }
+  const dirArr = fs.readdirSync(rootPath)
+  dirArr.forEach((e)=>{
+    const filePath = p.join(rootPath, e, 'index.js')
+    const imports = scanImport(filePath,true)
+    imports.local.unshift(filePath)
+    imports.local.forEach((el)=>{
+      const cwd = process.cwd()
+      const target = p.join(cwd, outPath,'static')
+      const end = p.join(target,el)
+      mkdir(target,el)
+      fs.writeFileSync(end,cache.get(el),'utf-8')
+    })
+    const html = getBuildHTMLTemplate(imports, depend)
+    createPage(p.join(outPath, e), html)
+  })
 }
 
 module.exports = {
@@ -103,5 +155,7 @@ module.exports = {
   // 获取文件后缀格式 默认为js
   getExt,
   // 获取文件路径
-  getFilePath
+  getFilePath,
+  // 遍历文件夹
+  traversalFolder
 }

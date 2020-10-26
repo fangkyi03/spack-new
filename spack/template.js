@@ -1,7 +1,20 @@
 const p = require('path')
 
+// 获取ws
+function getWS() {
+  return `
+    <script type='text / javascript'>
+    var ws = new WebSocket('ws://localhost:8001');
+    ws.onmessage = function (e) {
+      console.log('接受返回数据', e)
+      window.location.reload()
+    }
+      </script >
+  `
+}
+
 // 获取空白HTML模板
-function getEmptyHTMLTemplate() {
+function getEmptyHTMLTemplate(isWs = true) {
   return `
   <!DOCTYPE html>
     <html lang="en">
@@ -17,15 +30,12 @@ function getEmptyHTMLTemplate() {
     <body>
       <div id='root'></div>
     </body>
-    <script type='text/javascript'>
-      var ws = new WebSocket('ws://localhost:8001');
-      ws.onmessage = function(e){
-          console.log('接受返回数据',e)
-          window.location.reload()
-      }
-    </script>
+    ${
+      isWs
+      ? getWS()
+      :''
+    }
   </html>
-
   `
 }
 
@@ -46,7 +56,7 @@ function getAfterInjection() {
 }
 
 // 获取html模板
-function getHTMLTemplate(imports, depend,local) {
+function getHTMLTemplate(imports, depend) {
   if (Object.keys(depend).length == 0) {
     return getEmptyHTMLTemplate()
   }else {
@@ -56,6 +66,20 @@ function getHTMLTemplate(imports, depend,local) {
     const beforeInjection = getBeforeInjection()
     const afterInjection = getAfterInjection()
     return getEmptyHTMLTemplate().replace('%%%script_link%%%', text).replace('%%%before_injection%%%', beforeInjection).replace('%%%after_injection%%%',afterInjection)
+  }
+}
+
+// 获取编译html模板
+function getBuildHTMLTemplate(imports, depend) {
+  if (Object.keys(depend).length == 0) {
+    return getEmptyHTMLTemplate(false)
+  } else {
+    const dependList = getDependList(imports.depend, depend)
+    const localList = getLocalList(imports.local.map((e)=>p.join('../static',e)))
+    const text = [].concat(dependList, localList).join('\n')
+    const beforeInjection = getBeforeInjection()
+    const afterInjection = getAfterInjection()
+    return getEmptyHTMLTemplate(false).replace('%%%script_link%%%', text).replace('%%%before_injection%%%', beforeInjection).replace('%%%after_injection%%%', afterInjection)
   }
 }
 
@@ -129,6 +153,8 @@ function getScript(src) {
 // 将import转换成text
 module.exports = {
   getHTMLTemplate,
+  getBuildHTMLTemplate,
   getScript,
-  getEmptyHTMLTemplate
+  getEmptyHTMLTemplate,
+  getBuildHTMLTemplate
 }

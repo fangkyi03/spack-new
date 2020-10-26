@@ -33,8 +33,11 @@ export default function Index() {
   如果是又有js又有css的话 请使用上面那种
 ```
 
+
 # 使用说明
 ```javascript
   // 启动
   npm run dev
+  // 编译
+  npm run build
 ```
