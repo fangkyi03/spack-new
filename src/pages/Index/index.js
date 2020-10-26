@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './index.less'
 export default function Index() {
   return (
-    <div>
-      测试 1231231
+    <div className='main'>
+      测试
     </div>
   )
 }

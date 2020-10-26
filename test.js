@@ -18,13 +18,13 @@ function getComponentTemplate(componentName) {
 function getPageTemplate(componentName,pageName) {
   return `
   import React from 'react'
-  import Test from '../../components/${componentName}'
+  import ${componentName} from '../../components/${componentName}'
   import { Button, Radio } from 'antd'
   export default function ${pageName}() {
     const [text,setText] = React.useState(Math.random() * 1000)
     return (
       <div style={{display:'flex',flexDirection:'column'}}>
-        <Test/>
+        <${componentName}/>
         <div onClick={()=>setText(Math.random() * 1000)}>{'点击切换' + text}</div>
         {
           Array(10).fill({}).map((e,i)=>{
