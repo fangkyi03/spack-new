@@ -9,6 +9,7 @@ const mime = require('mime-types')
 const etag = require('etag')
 const cache = require('./cache')
 const chokidar = require('chokidar')
+const { exception } = require('console')
 const WebSocketServer = require('ws').Server
 
 class Server {
@@ -55,7 +56,7 @@ class Server {
   }
 
   _serverCallBack = (req, res) => {
-    const { rootPath = 'src', depend = {}} = this.config
+    const { rootPath = 'src/pages', depend = {}} = this.config
     try {
       // 如果不是文件 而是路径的话 则直接加载路径
       if (req.url.indexOf('.') == -1) {
@@ -65,6 +66,8 @@ class Server {
           imports.local.unshift(path)
           const html = template.getHTMLTemplate(imports, depend)
           return res.send(html)
+        }else {
+          throw new Error('未找到指定文件路径:' + path)
         }
       } else if (req.url !== '/favicon.ico') {
         return this.sendHTML(cache.get(req.url.slice(1)), res)

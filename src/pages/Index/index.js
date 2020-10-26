@@ -8,7 +8,7 @@ export default function Index() {
       {
         Array(10).fill({}).map((e,i)=>{
           return (
-            <Button>{'1·1231' + i}</Button>
+            <Button>{'112312·1231' + i}</Button>
           )
         })
       }

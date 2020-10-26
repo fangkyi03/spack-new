@@ -8,7 +8,7 @@
   DEPEND 依赖如antd等 支持{js,css}跟字符串两种类型 如果是字符串的话 会默认当做js处理
  */
 module.exports = {
-  rootPath:'src',
+  rootPath:'src/pages',
   port:8000,
   // isOpen:true,
   mode:'dev',
