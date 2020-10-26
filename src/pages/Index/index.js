@@ -5,10 +5,11 @@ export default function Index() {
   const [text,setText] = React.useState(Math.random() * 1000)
   return (
     <div style={{display:'flex',flexDirection:'column'}}>
+      <div onClick={()=>setText(Math.random() * 1000)}>{'点击切换' + text}</div>
       {
         Array(10).fill({}).map((e,i)=>{
           return (
-            <Button>{'112312·1231' + i}</Button>
+            <Button>{'1' + i}</Button>
           )
         })
       }
