@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "dev": "node ./spack/dev",
-    "build": "node ./spack/build"
+    "build": "node ./spack/build",
+    "test":"node ./test"
   },
   "author": "",
   "license": "ISC",

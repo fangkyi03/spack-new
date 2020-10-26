@@ -33,6 +33,10 @@ export default function Index() {
   如果是又有js又有css的话 请使用上面那种
 ```
 
+# 打包性能
+可以执行 npm run test && npm run build
+1000个页面 + 1000个组件
+用时5分钟
 
 # 使用说明
 ```javascript
@@ -40,4 +44,5 @@ export default function Index() {
   npm run dev
   // 编译
   npm run build
+  // 生成1000个page + 1000个components用来测试打包性能
 ```
