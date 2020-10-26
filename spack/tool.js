@@ -110,7 +110,6 @@ function mkdir(target,dir) {
     if (!fs.existsSync(dirPath)) {
       fs.mkdirSync(dirPath)
     }
-    console.log('')
   })
 }
 
