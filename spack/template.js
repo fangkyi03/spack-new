@@ -3,13 +3,13 @@ const p = require('path')
 // 获取ws
 function getWS() {
   return `
-    <script type='text / javascript'>
-    var ws = new WebSocket('ws://localhost:8001');
-    ws.onmessage = function (e) {
-      console.log('接受返回数据', e)
-      window.location.reload()
-    }
-      </script >
+    <script type='text/javascript'>
+      var ws = new WebSocket('ws://localhost:8001');
+      ws.onmessage = function (e) {
+        console.log('接受返回数据', e)
+        window.location.reload()
+      }
+    </script >
   `
 }
 
