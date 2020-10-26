@@ -26,7 +26,7 @@ class Server {
         ignoreInitial: true,
         disableGlobbing: false
       })
-      watch.once('change', (filePath) => {
+      watch.on('change', (filePath) => {
         console.log('发生文件变动')
         wss.send('reload')
         console.log('更新完成')
@@ -37,7 +37,7 @@ class Server {
   start() {
     const {port = 3000,isOpen = false } = this.config
     app.listen(port, () => console.log(`服务已启动 端口号:${port}!`))
-    app.all('*', (req, res) => this._serverCallBack(req, res))
+    app.all('*',this._serverCallBack)
     isOpen && open(`http://127.0.0.1:${port}`)
   }
 
@@ -54,21 +54,27 @@ class Server {
     res.end()
   }
 
-  _serverCallBack(req, res) {
+  _serverCallBack = (req, res) => {
     const { rootPath = 'src', depend = {}} = this.config
-    // 如果不是文件 而是路径的话 则直接加载路径
-    if (req.url.indexOf('.') == -1) {
-      const path = p.join(tool.getFilePath(rootPath,req.url))
-      if (fs.existsSync(path)) {
-        const imports = tool.scanImport(path,true)
-        imports.local.unshift(path)
-        const html = template.getHTMLTemplate(imports,depend)
-        return res.send(html)
+    try {
+      // 如果不是文件 而是路径的话 则直接加载路径
+      if (req.url.indexOf('.') == -1) {
+        const path = p.join(tool.getFilePath(rootPath, req.url))
+        if (fs.existsSync(path)) {
+          const imports = tool.scanImport(path, true)
+          imports.local.unshift(path)
+          const html = template.getHTMLTemplate(imports, depend)
+          return res.send(html)
+        }
+      } else if (req.url !== '/favicon.ico') {
+        return this.sendHTML(cache.get(req.url.slice(1)), res)
+      } else {
+        return this.sendHTML('', res)
       }
-    } else if (req.url !== '/favicon.ico'){
-      return this.sendHTML(cache.get(req.url.slice(1)),res)
-    }else {
-      return this.sendHTML('',res)
+    } catch (error) {
+      console.log('error', error.message)
+      const html = template.getEmptyHTMLTemplate().replace('%%%before_injection%%%', '').replace('%%%script_link%%%', '').replace('%%%after_injection%%%','')
+      return res.send(html)
     }
   }
 }
