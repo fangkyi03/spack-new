@@ -36,7 +36,7 @@ export default function Index() {
 # 打包性能
 可以执行 npm run test && npm run build
 1000个页面 + 1000个组件
-用时5分钟
+用时50秒
 
 # 使用说明
 ```javascript
