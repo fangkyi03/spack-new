@@ -5,9 +5,8 @@ const fs = require('fs')
 const cache = require('./cache')
 const p = require('path')
 const child = require('child_process')
-const { openThread } = require('./thread')
-const os = require('os')
-const { StaticPool } = require("node-worker-threads-pool");
+const { startThread } = require('./thread')
+const { getBuildHTMLTemplate } = require('./template')
 
 // 获取文件名称
 function getFileName(path) {
@@ -133,11 +132,8 @@ function traversalFolder(config) {
   }
   const dirArr = fs.readdirSync(rootPath)
   dirArr.forEach(async(e)=>{
-    const staticPool = new StaticPool({
-      size: 4,
-      task: openThread
-    });
-    console.log('结果' + await staticPool.exec({ item:e, rootPath, depend }))
+    const result = await startThread({item:e,rootPath,depend})
+    console.log('结果',result)
   })
 }
 
