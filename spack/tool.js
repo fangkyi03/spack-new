@@ -5,7 +5,9 @@ const fs = require('fs')
 const cache = require('./cache')
 const p = require('path')
 const child = require('child_process')
-const { getBuildHTMLTemplate } = require('./template')
+const { openThread } = require('./thread')
+const os = require('os')
+const { StaticPool } = require("node-worker-threads-pool");
 
 // 获取文件名称
 function getFileName(path) {
@@ -130,19 +132,12 @@ function traversalFolder(config) {
     fs.mkdirSync(outPath + '/static')
   }
   const dirArr = fs.readdirSync(rootPath)
-  dirArr.forEach((e)=>{
-    const filePath = p.join(rootPath, e, 'index.js')
-    const imports = scanImport(filePath,true)
-    imports.local.unshift(filePath)
-    imports.local.forEach((el)=>{
-      const cwd = process.cwd()
-      const target = p.join(cwd, outPath,'static')
-      const end = p.join(target,el)
-      mkdir(target,el)
-      fs.writeFileSync(end,cache.get(el),'utf-8')
-    })
-    const html = getBuildHTMLTemplate(imports, depend)
-    createPage(p.join(outPath, e), html)
+  dirArr.forEach(async(e)=>{
+    const staticPool = new StaticPool({
+      size: 4,
+      task: openThread
+    });
+    console.log('结果' + await staticPool.exec({ item:e, rootPath, depend }))
   })
 }
 
@@ -156,5 +151,7 @@ module.exports = {
   // 获取文件路径
   getFilePath,
   // 遍历文件夹
-  traversalFolder
+  traversalFolder,
+  createPage,
+  mkdir
 }
