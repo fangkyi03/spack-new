@@ -1,4 +1,5 @@
 const p = require('path')
+const config = require('../config')
 
 // 获取ws
 function getWS() {
@@ -15,12 +16,13 @@ function getWS() {
 
 // 获取空白HTML模板
 function getEmptyHTMLTemplate(isWs = true) {
+  const {title} = config
   return `
   <!DOCTYPE html>
     <html lang="en">
     <head>
       <meta charset="UTF-8">
-      <title>Document</title>
+      <title>${title}</title>
       <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
       <link rel="icon" href="data:image/ico;base64,aWNv">
       %%%before_injection%%%
@@ -42,7 +44,7 @@ function getEmptyHTMLTemplate(isWs = true) {
 // 注入前
 function getBeforeInjection () {
   return [
-    '<script crossorigin src="https://cdn.bootcdn.net/ajax/libs/babel-core/5.6.20/browser.min.js"></script>',
+    '<script src="https://cdn.bootcdn.net/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>',
     '<script crossorigin src="https://cdn.bootcdn.net/ajax/libs/react/16.14.0/umd/react.production.min.js"></script>',
     '<script crossorigin src="https://cdn.bootcdn.net/ajax/libs/react-dom/16.14.0/umd/react-dom.production.min.js"></script>'
   ].join('\n')

@@ -37,6 +37,10 @@ function scanImport(dirPath,isRoot = false) {
     // 本地文件
     local:[]
   }
+  const importDepend = cache.getDepend(dirPath)
+  if (importDepend) {
+    return importDepend
+  }
   const context = fs.readFileSync(dirPath,'utf-8')
   const tranform = babel.transform(context)
   const ast = babel.parseSync(tranform.code)
@@ -84,6 +88,7 @@ function scanImport(dirPath,isRoot = false) {
   })
   const text = babel.transformFromAstSync(ast, tranform.code)
   cache.add(dirPath,text.code)
+  cache.addDepend(dirPath,imports)
   return imports
 }
 
