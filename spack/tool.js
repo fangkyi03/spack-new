@@ -38,9 +38,9 @@ function scanImport(dirPath,isRoot = false) {
     local:[]
   }
   const importDepend = cache.getDepend(dirPath)
-  if (isRoot && importDepend) {
-    return importDepend
-  }
+  // if (isRoot && importDepend) {
+  //   return importDepend
+  // }
   const context = fs.readFileSync(dirPath,'utf-8')
   const tranform = babel.transform(context)
   const ast = babel.parseSync(tranform.code)
@@ -64,7 +64,7 @@ function scanImport(dirPath,isRoot = false) {
         const localPath = getExt(p.join(dirPath, '../', value))
         imports.local.push(localPath)
         if (p.extname(localPath) == '.js') {
-          const ret = scanImport(localPath, isRoot)
+          const ret = scanImport(localPath)
           imports.depend = imports.depend.concat(ret.depend)
           imports.local = imports.local.concat(ret.local)
         }else {
