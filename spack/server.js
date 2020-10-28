@@ -62,7 +62,7 @@ class Server {
       if (req.url.indexOf('.') == -1) {
         const path = p.join(tool.getFilePath(rootPath, req.url))
         if (fs.existsSync(path)) {
-          const imports = tool.scanImport(path, true)
+          const imports = tool.scanImport(path, false)
           imports.local.unshift(path)
           const html = template.getHTMLTemplate(imports, depend)
           return res.send(html)

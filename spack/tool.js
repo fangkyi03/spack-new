@@ -38,7 +38,7 @@ function scanImport(dirPath,isRoot = false) {
     local:[]
   }
   const importDepend = cache.getDepend(dirPath)
-  if (importDepend) {
+  if (isRoot && importDepend) {
     return importDepend
   }
   const context = fs.readFileSync(dirPath,'utf-8')
