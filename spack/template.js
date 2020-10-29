@@ -20,6 +20,9 @@ function getEmptyHTMLTemplate(isWs = true) {
   return `
   <!DOCTYPE html>
     <html lang="en">
+    <body>
+      <div id='root'></div>
+    </body>
     <head>
       <meta charset="UTF-8">
       <title>${title}</title>
@@ -29,9 +32,6 @@ function getEmptyHTMLTemplate(isWs = true) {
       %%%script_link%%%
       %%%after_injection%%%
     </head>
-    <body>
-      <div id='root'></div>
-    </body>
     ${
       isWs
       ? getWS()
@@ -44,9 +44,8 @@ function getEmptyHTMLTemplate(isWs = true) {
 // 注入前
 function getBeforeInjection () {
   return [
-    '<script src="https://cdn.bootcdn.net/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>',
-    '<script crossorigin src="https://cdn.bootcdn.net/ajax/libs/react/16.14.0/umd/react.production.min.js"></script>',
-    '<script crossorigin src="https://cdn.bootcdn.net/ajax/libs/react-dom/16.14.0/umd/react-dom.production.min.js"></script>'
+    // '<script type="text/javascript" src="src/lib/react-dom.js"></script>',
+    // '<script type="text/javascript" src="src/lib/react.js"></script>'
   ].join('\n')
 }
 
@@ -131,7 +130,7 @@ function getDependList(dependArr,depend) {
 
 // 创建脚本
 function createScript(path,isDepend = false) {
-  return `<script type=${isDepend ? 'text/javascript' : 'text/babel'} src='${path}'></script>`
+  return `<script type=${'text/javascript'} src='${path}'></script>`
 }
 
 // 创建引入

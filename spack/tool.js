@@ -52,8 +52,16 @@ function scanImport(dirPath,isRoot = false) {
       const {value} = source
       const names = specifiers.map((e) => e.local.name)
       if (value.indexOf('.') == -1) {
-        imports.depend.push(value)
+        if (value == 'react') {
+          scanImport('src/lib/react-dom.js')
+          scanImport('src/lib/react.js')
+          imports.local.push('src/lib/react-dom.js')
+          imports.local.push('src/lib/react.js')
+          path.remove()
+          return
+        }
         const isDefault = specifiers.some((e) => e.type == 'ImportDefaultSpecifier')
+        imports.depend.push(value)
         if (isDefault) {
           path.remove()
         } else {
