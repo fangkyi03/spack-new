@@ -90,6 +90,7 @@ function getLocalList(local) {
   return local.reverse().map((e)=>{
     const ext = p.extname(e)
     switch (ext) {
+      case '.json':
       case '.js':
         return createScript(e)
       case '.css':

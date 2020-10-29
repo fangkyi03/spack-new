@@ -50,9 +50,9 @@ function scanImport(dirPath,isRoot = false) {
     ImportDeclaration(path) {
       const {source,specifiers} = path.node
       const {value} = source
+      const names = specifiers.map((e) => e.local.name)
       if (value.indexOf('.') == -1) {
         imports.depend.push(value)
-        const names = specifiers.map((e) => e.local.name)
         const isDefault = specifiers.some((e) => e.type == 'ImportDefaultSpecifier')
         if (isDefault) {
           path.remove()
@@ -64,13 +64,20 @@ function scanImport(dirPath,isRoot = false) {
         const localPath = getExt(p.join(dirPath, '../', value))
         imports.local.push(localPath)
         if (p.extname(localPath) == '.js') {
-          const ret = scanImport(localPath)
+          const ret = scanImport(localPath, isRoot)
           imports.depend = imports.depend.concat(ret.depend)
           imports.local = imports.local.concat(ret.local)
+          path.remove()
+        }else if (p.extname(localPath) == '.json'){
+          const text = fs.readFileSync(localPath, 'utf-8')
+          const name = value.split('/').slice(-1)[0].split('.')[0] + '__json'
+          const constNameTemplate = babel.template('const %%define%% = %%name%%'.replace('%%name%%', name).replace('%%define%%', names.join(',')))
+          cache.add(localPath, `var ${name} = ` + text, 'utf-8')
+          path.replaceWith(constNameTemplate())
         }else {
-          cache.add(localPath,fs.readFileSync(localPath,'utf-8'))
+          cache.add(localPath, fs.readFileSync(localPath, 'utf-8'))
+          path.remove()
         }
-        path.remove()
       }
     },
     ExportDefaultDeclaration(path) {
