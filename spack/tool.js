@@ -38,9 +38,9 @@ function scanImport(dirPath,isRoot = false) {
     local:[]
   }
   const importDepend = cache.getDepend(dirPath)
-  if (importDepend) {
-    return importDepend
-  }
+  // if (importDepend) {
+  //   return importDepend
+  // }
   const context = fs.readFileSync(dirPath,'utf-8')
   const tranform = babel.transform(context)
   const ast = babel.parseSync(tranform.code)
