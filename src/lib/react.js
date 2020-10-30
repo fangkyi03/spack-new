@@ -3,11 +3,9 @@ function renderChildren(current,children) {
         children.forEach((e) => {
             renderChildren(current,e)
         })
-    } else if (typeof children == 'string') {
-        current.appendChild(document.createTextNode(children))
     } else if (typeof children == 'object' && children instanceof HTMLElement) {
         current.appendChild(children)
-    }else {
+    } else {
         current.appendChild(document.createTextNode(children))
     }
 }

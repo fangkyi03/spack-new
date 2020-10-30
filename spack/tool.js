@@ -72,7 +72,7 @@ function scanImport(dirPath,isRoot = false) {
         const localPath = getExt(p.join(dirPath, '../', value))
         imports.local.push(localPath)
         if (p.extname(localPath) == '.js') {
-          const ret = scanImport(localPath, isRoot)
+          const ret = scanImport(localPath, false)
           imports.depend = imports.depend.concat(ret.depend)
           imports.local = imports.local.concat(ret.local)
           path.remove()
