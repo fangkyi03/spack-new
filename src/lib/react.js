@@ -26,6 +26,14 @@ function renderAttr(current,props) {
             current.addEventListener(eventName,props[e])
         }
         else {
+            if (props[e].__proto__ && props[e].__proto__.watch) {
+                props[e].__proto__.watch.push(()=>{
+                    console.log('测试')
+                })
+            }else {
+                props[e].__proto__.watch = [()=>console.log('测试1')]
+            }
+            console.log('props[e].prototype.watch', props[e], props[e].__proto__.watch)
             current[e] = props[e]
         }
     })
@@ -34,31 +42,36 @@ function renderAttr(current,props) {
 function Component() {
     console.log('er')
 }
-function React() {
-    function createElement(element,props,children,...arg) {
-        if (typeof element == 'function') {
-            return element({ ...props, children}, children)
-        }else {
-            const elementView = document.createElement(element)
-            if (children == '[' && arg && arg.slice(-1)[0] == ']') {
-                renderChildren(elementView, arg.slice(0,arg.length - 1))
-            }else {
-                if (children !== undefined) {
-                    renderChildren(elementView, children)
-                }
-                if (arg) {
-                    renderChildren(elementView, arg)
-                }
+function createElement(element, props, children, ...arg) {
+    if (typeof element == 'function') {
+        return element.call({}, { ...props, children }, children)
+    } else {
+        const elementView = document.createElement(element)
+        if (children == '[' && arg && arg.slice(-1)[0] == ']') {
+            renderChildren(elementView, arg.slice(0, arg.length - 1))
+        } else {
+            if (children !== undefined) {
+                renderChildren(elementView, children)
             }
-            if (props) {
-                renderAttr(elementView, props)
+            if (arg) {
+                renderChildren(elementView, arg)
             }
-            return elementView
         }
+        if (props) {
+            renderAttr(elementView, props)
+        }
+        return elementView
     }
+}
+
+function useState(data) {
+    return [0,1]
+}
+function React() {
     return {
         createElement,
-        Component
+        Component,
+        useState
     }
 }
 window.React = React()
