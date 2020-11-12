@@ -158,6 +158,24 @@ function traversalFolder(config) {
   })
 }
 
+function getScriptText(content) {
+  return content.match(/<script.*?>([\s\S]+?)<\/script>/)[0].replace('<script>','<script type="text/javascript">')
+}
+
+function getStylesContent(content) {
+  return content.match(/<style.*?>([\s\S]+?)<\/style>/)[0]
+}
+
+function scanVueImport (path) {
+  const content = fs.readFileSync(path,'utf-8')
+  const script = getScriptText(content)
+  const style = getStylesContent(content)
+  return {
+    script,
+    style
+  }
+}
+
 module.exports = {
   // 获取文件名称
   getFileName,
@@ -168,5 +186,7 @@ module.exports = {
   // 获取文件路径
   getFilePath,
   // 遍历文件夹
-  traversalFolder
+  traversalFolder,
+  // 扫描vue导入文件
+  scanVueImport
 }

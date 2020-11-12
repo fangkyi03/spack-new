@@ -62,10 +62,16 @@ class Server {
       if (req.url.indexOf('.') == -1) {
         const path = p.join(tool.getFilePath(rootPath, req.url))
         if (fs.existsSync(path)) {
-          const imports = tool.scanImport(path, true)
-          imports.local.unshift(path)
-          const html = template.getHTMLTemplate(imports, depend)
-          return res.send(html)
+          if (p.extname(path) == '.vue') {
+            const imports = tool.scanVueImport(path,true)
+            const html = template.getVueHTMLTemplate(imports)
+            return res.send(html)
+          }else {
+            const imports = tool.scanImport(path, true)
+            imports.local.unshift(path)
+            const html = template.getHTMLTemplate(imports, depend)
+            return res.send(html)
+          }
         }else {
           throw new Error('未找到指定文件路径:' + path)
         }

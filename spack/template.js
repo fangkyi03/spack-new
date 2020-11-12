@@ -71,17 +71,32 @@ function getHTMLTemplate(imports, depend) {
   }
 }
 
+// 获取html模板
+function getVueHTMLTemplate(imports, depend) {
+  const vueTemplate = ['<script src="https://cdn.jsdelivr.net/npm/vue"></script>'].toString()
+  const im = [].concat(imports.script, imports.style).join('\n')
+  // const dependList = getDependList(imports.depend, depend)
+  // const localList = getLocalList(imports.local.map((e)=>p.join('../static',e)))
+  // const text = [].concat(dependList, localList).join('\n')
+  // const beforeInjection = getBeforeInjection()
+  // const afterInjection = getAfterInjection()
+  return getEmptyHTMLTemplate(false)
+    .replace('%%%before_injection%%%', vueTemplate)
+    .replace('%%%script_link%%%', im)
+    .replace('%%%after_injection%%%', '')
+}
+
 // 获取编译html模板
 function getBuildHTMLTemplate(imports, depend) {
   if (Object.keys(depend).length == 0) {
     return getEmptyHTMLTemplate(false)
   } else {
     const dependList = getDependList(imports.depend, depend)
-    const localList = getLocalList(imports.local.map((e)=>p.join('../static',e)))
+    const localList = getLocalList(imports.local)
     const text = [].concat(dependList, localList).join('\n')
     const beforeInjection = getBeforeInjection()
     const afterInjection = getAfterInjection()
-    return getEmptyHTMLTemplate(false).replace('%%%script_link%%%', text).replace('%%%before_injection%%%', beforeInjection).replace('%%%after_injection%%%', afterInjection)
+    return getEmptyHTMLTemplate().replace('%%%script_link%%%', text).replace('%%%before_injection%%%', beforeInjection).replace('%%%after_injection%%%', afterInjection)
   }
 }
 
@@ -164,5 +179,6 @@ module.exports = {
   getBuildHTMLTemplate,
   getScript,
   getEmptyHTMLTemplate,
-  getBuildHTMLTemplate
+  getBuildHTMLTemplate,
+  getVueHTMLTemplate
 }

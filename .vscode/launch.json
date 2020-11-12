@@ -20,7 +20,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/spack"
+            "program": "${workspaceFolder}/spack/dev"
         }
     ]
 }
