@@ -47,3 +47,6 @@ export default function Index() {
   // 生成1000个page + 1000个components用来测试打包性能
   npm run test && npm run build
 ```
+
+# vue介绍
+目前vue支持render跟template两种写法 可以看对应的pages目录下的文件
