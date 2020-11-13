@@ -51,6 +51,10 @@ function getVueEmptyHTMLTemplate(isWs = true) {
       <meta charset="UTF-8">
       <title>${title}</title>
       <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/vant@2.10/lib/index.css"
+      />
       <link rel="icon" href="data:image/ico;base64,aWNv">
       %%%before_injection%%%
       %%%script_link%%%
@@ -102,7 +106,7 @@ function getHTMLTemplate(imports, depend) {
 
 // 获取html模板
 function getVueHTMLTemplate(imports, depend) {
-  const vueTemplate = ['<script src="https://cdn.jsdelivr.net/npm/vue"></script>'].toString()
+  const vueTemplate = ['<script src="https://cdn.jsdelivr.net/npm/vue"></script>','<script src="https://cdn.jsdelivr.net/npm/vant@2.10/lib/vant.min.js"></script>'].join('\n')
   const im = [].concat(imports.template,imports.script, imports.style).filter((e)=>e).join('\n')
   return getVueEmptyHTMLTemplate(false)
     .replace('%%%before_injection%%%', vueTemplate)
