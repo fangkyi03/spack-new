@@ -41,6 +41,35 @@ function getEmptyHTMLTemplate(isWs = true) {
   `
 }
 
+// 获取空白HTML模板
+function getVueEmptyHTMLTemplate(isWs = true) {
+  const { title } = config
+  return `
+  <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>${title}</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+      <link rel="icon" href="data:image/ico;base64,aWNv">
+      %%%before_injection%%%
+      %%%script_link%%%
+      %%%after_injection%%%
+    </head>
+    <body>
+      <div id='root'></div>
+    </body>
+    <script>
+      new Vue({
+        el: '#root',
+        template:'<App/>'
+      })
+    </script>
+      ${getWS()}
+  </html>
+  `
+}
+
 // 注入前
 function getBeforeInjection () {
   return [
@@ -74,13 +103,8 @@ function getHTMLTemplate(imports, depend) {
 // 获取html模板
 function getVueHTMLTemplate(imports, depend) {
   const vueTemplate = ['<script src="https://cdn.jsdelivr.net/npm/vue"></script>'].toString()
-  const im = [].concat(imports.script, imports.style).join('\n')
-  // const dependList = getDependList(imports.depend, depend)
-  // const localList = getLocalList(imports.local.map((e)=>p.join('../static',e)))
-  // const text = [].concat(dependList, localList).join('\n')
-  // const beforeInjection = getBeforeInjection()
-  // const afterInjection = getAfterInjection()
-  return getEmptyHTMLTemplate(false)
+  const im = [].concat(imports.template,imports.script, imports.style).filter((e)=>e).join('\n')
+  return getVueEmptyHTMLTemplate(false)
     .replace('%%%before_injection%%%', vueTemplate)
     .replace('%%%script_link%%%', im)
     .replace('%%%after_injection%%%', '')

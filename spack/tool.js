@@ -158,21 +158,68 @@ function traversalFolder(config) {
   })
 }
 
+function loadVueAST (content) {
+  const tranform = babel.transform(content)
+  const ast = babel.parseSync(tranform.code)
+  const vueComponent = babel.template(`Vue.component("%%name%%",%%obj%%)`.replace('%%name%%','App'))
+  traverse(ast, {
+    ExportDefaultDeclaration(path) {
+      const node = path.node
+      if (node.declaration) {
+        path.replaceWith(vueComponent({obj:node.declaration}))
+      }
+    },
+    // CallExpression(path) {
+    //   const node = path.node 
+    //   if (node.callee && node.callee.property && node.callee.property.name.indexOf('render') !== -1) {
+    //     if (Array.isArray(node.arguments)) {
+    //       node.arguments.unshift(types.identifier('h'))
+    //     }else {
+    //       node.arguments = [types.identifier('h')]
+    //     }
+    //   }
+    // },
+    // ObjectMethod(path) {
+    //   const node = path.node
+    //   if (node.key.name.indexOf('render') !== -1 && node.key.name !== 'render') {
+    //     if (Array.isArray(node.params)) {
+    //       node.params.unshift(types.identifier('h'))
+    //     } else {
+    //       node.params = [types.identifier('h')]
+    //     }
+    //   }
+    // }
+  })
+  const text = babel.transformFromAstSync(ast, tranform.code)
+  return text.code
+}
+
 function getScriptText(content) {
   return content.match(/<script.*?>([\s\S]+?)<\/script>/)[0].replace('<script>','<script type="text/javascript">')
 }
 
 function getStylesContent(content) {
-  return content.match(/<style.*?>([\s\S]+?)<\/style>/)[0]
+  const match = content.match(/<style.*?>([\s\S]+?)<\/style>/)
+  return match ? match[0] : ''
+}
+
+function getTemplate(content) {
+  const match = content.match(/<template.*?>([\s\S]+?)<\/template>/)
+  return match ? match[0] : ''
 }
 
 function scanVueImport (path) {
   const content = fs.readFileSync(path,'utf-8')
-  const script = getScriptText(content)
+  const template = getTemplate(content)
+  const scriptText = getScriptText(content)
+  const text = scriptText.replace('<script type="text/javascript">','').replace('</script>','')
+  const vueContent = loadVueAST(text)
+  const script = `<script type="text/javascript">${vueContent}</script>`
   const style = getStylesContent(content)
   return {
     script,
-    style
+    style,
+    template
   }
 }
 

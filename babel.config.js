@@ -2,7 +2,19 @@ module.exports = function (api) {
   api.cache(false)
   return {
     "presets": [
-      "@babel/preset-react"
+      [
+        '@vue/babel-preset-jsx',
+        {
+          vModel: false,
+          compositionAPI: false,
+        },
+      ],
+      // [
+      //   "@babel/preset-react",
+      //   {
+      //     "pragma": "h"
+      //   }
+      // ]
     ],
     "plugins": [
       [

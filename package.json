@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node ./spack/dev",
     "build": "node ./spack/build",
-    "test":"node ./test"
+    "test": "node ./test"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "@babel/traverse": "^7.12.1",
     "@babel/types": "^7.12.1",
     "@types/antd": "^1.0.0",
+    "@vue/babel-preset-jsx": "^1.2.4",
     "chokidar": "^3.4.3",
     "etag": "^1.8.1",
     "express": "^4.17.1",
