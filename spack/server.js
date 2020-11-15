@@ -9,9 +9,8 @@ const mime = require('mime-types')
 const etag = require('etag')
 const cache = require('./cache')
 const chokidar = require('chokidar')
-const { exception } = require('console')
 const WebSocketServer = require('ws').Server
-
+const vueTemplate = require('./Vue/template')
 class Server {
   constructor(config) {
     this.config = config
@@ -42,10 +41,10 @@ class Server {
     isOpen && open(`http://127.0.0.1:${port}`)
   }
 
-  sendHTML(html, res) {
+  sendHTML(html, res,type = 'js') {
     const ETag = etag(html);
     const headers = {
-      'Content-Type': mime.contentType('js') || 'application/octet-stream',
+      'Content-Type': mime.contentType(type) || 'application/octet-stream',
       'Access-Control-Allow-Origin': '*',
       ETag,
       Vary: 'Accept-Encoding'
@@ -55,7 +54,7 @@ class Server {
     res.end()
   }
 
-  _serverCallBack = (req, res) => {
+_serverCallBack = async(req, res) => {
     const { rootPath = 'src/pages', depend = {}} = this.config
     try {
       // 如果不是文件 而是路径的话 则直接加载路径
@@ -63,8 +62,8 @@ class Server {
         const path = p.join(tool.getFilePath(rootPath, req.url))
         if (fs.existsSync(path)) {
           if (p.extname(path) == '.vue') {
-            const imports = tool.scanVueImport(path,true)
-            const html = template.getVueHTMLTemplate(imports)
+            const imports = await tool.scanVueImport(path,true)
+            const html = vueTemplate.getVueHTMLTemplate(imports, path)
             return res.send(html)
           }else {
             const imports = tool.scanImport(path, true)
@@ -76,7 +75,11 @@ class Server {
           throw new Error('未找到指定文件路径:' + path)
         }
       } else if (req.url !== '/favicon.ico') {
-        return this.sendHTML(cache.get(req.url.slice(1)), res)
+        if (req.url.indexOf('.css') !== -1) {
+          return this.sendHTML(cache.get(req.url.slice(1)), res,'css')
+        }else {
+          return this.sendHTML(cache.get(req.url.slice(1)), res)
+        }
       } else {
         return this.sendHTML('', res)
       }

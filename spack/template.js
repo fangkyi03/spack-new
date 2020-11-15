@@ -1,6 +1,5 @@
 const p = require('path')
 const config = require('../config')
-
 // 获取ws
 function getWS() {
   return `
@@ -47,10 +46,14 @@ function getVueEmptyHTMLTemplate(isWs = true) {
   return `
   <!DOCTYPE html>
     <html lang="en">
+    <body>
+      <div id='root'></div>
+    </body>
     <head>
       <meta charset="UTF-8">
       <title>${title}</title>
       <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+      <link rel="stylesheet" href="http://at.alicdn.com/t/font_2203899_rx3jufsnpo.css"/>
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/vant@2.10/lib/index.css"
@@ -60,9 +63,6 @@ function getVueEmptyHTMLTemplate(isWs = true) {
       %%%script_link%%%
       %%%after_injection%%%
     </head>
-    <body>
-      <div id='root'></div>
-    </body>
     <script>
       new Vue({
         el: '#root',

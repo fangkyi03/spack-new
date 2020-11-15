@@ -6,7 +6,11 @@ const cache = require('./cache')
 const p = require('path')
 const child = require('child_process')
 const { getBuildHTMLTemplate } = require('./template')
-
+const VueBabel = require('./Vue/babel')
+const less = require('less')
+const vueTemplate = require('./Vue/template')
+const prettier = require('prettier')
+const UglifyJS = require("uglify-js");
 // 获取文件名称
 function getFileName(path) {
   switch (path) {
@@ -26,6 +30,15 @@ function getFilePath(path,url) {
     return react
   }else {
     return vue
+  }
+}
+
+function getImportObj() {
+  return {
+    // 依赖
+    depend: [],
+    // 本地文件
+    local: []
   }
 }
 
@@ -106,7 +119,9 @@ function getExt(path) {
     const filePath = p.join(path)
     const jsPath = filePath + '.js'
     const indexPath = p.join(filePath,'index.js')
-    const files = [jsPath,indexPath]
+    const vuePath = filePath + '.vue'
+    const vueIndexPath = p.join(filePath,'index.vue')
+    const files = [jsPath, indexPath, vuePath,vueIndexPath]
     const findResult = files.find((e)=> fs.existsSync(e))
     return findResult || path
   }else {
@@ -130,7 +145,8 @@ function createPage(path,html) {
   if (!fs.existsSync(path)) {
     fs.mkdirSync(path)
   }
-  fs.writeFileSync(p.join(path,'index.html'),html,'utf-8')
+  const format = html.replace(/  /g,'').split('\n').join(' ')
+  fs.writeFileSync(p.join(path, 'index.html'), format,'utf-8')
 }
 
 // 遍历指定文件夹
@@ -142,65 +158,62 @@ function traversalFolder(config) {
     fs.mkdirSync(outPath + '/static')
   }
   const dirArr = fs.readdirSync(rootPath)
-  dirArr.forEach((e)=>{
-    const filePath = p.join(rootPath, e, 'index.js')
-    const imports = scanImport(filePath,true)
-    imports.local.unshift(filePath)
-    imports.local.forEach((el)=>{
-      const cwd = process.cwd()
-      const target = p.join(cwd, outPath,'static')
-      const end = p.join(target,el)
-      mkdir(target,el)
-      fs.writeFileSync(end,cache.get(el),'utf-8')
-    })
-    const html = getBuildHTMLTemplate(imports, depend)
-    createPage(p.join(outPath, e), html)
-  })
-}
-
-function loadVueAST (content) {
-  const tranform = babel.transform(content)
-  const ast = babel.parseSync(tranform.code)
-  const vueComponent = babel.template(`Vue.component("%%name%%",%%obj%%)`.replace('%%name%%','App'))
-  traverse(ast, {
-    ExportDefaultDeclaration(path) {
-      const node = path.node
-      if (node.declaration) {
-        path.replaceWith(vueComponent({obj:node.declaration}))
+  dirArr.forEach(async(e)=>{
+    if (e == '.DS_Store') return
+    const filePath = getExt(p.join(rootPath, e))
+    if (filePath.indexOf('vue') !== -1) {
+      const imports = await scanVueImport.call(this,filePath, true)
+      imports.local.unshift(filePath)
+      imports.local.forEach((el) => {
+        const cwd = process.cwd()
+        const target = p.join(cwd, outPath, 'static')
+        const end = p.join(target, el)
+        mkdir(target, el)
+        const format = cache.get(el).replace(/  /g, '').split('\n').join(' ')
+        fs.writeFileSync(end, format, 'utf-8')
+      })
+      if (imports.styles) {
+        const stylesText = imports.styles.join('\n')
+        const cwd = process.cwd()
+        const target = p.join(cwd, outPath, 'static')
+        const end = p.join(target, 'command.css')
+        fs.writeFileSync(end, stylesText, 'utf-8')
       }
-    },
-    // CallExpression(path) {
-    //   const node = path.node 
-    //   if (node.callee && node.callee.property && node.callee.property.name.indexOf('render') !== -1) {
-    //     if (Array.isArray(node.arguments)) {
-    //       node.arguments.unshift(types.identifier('h'))
-    //     }else {
-    //       node.arguments = [types.identifier('h')]
-    //     }
-    //   }
-    // },
-    // ObjectMethod(path) {
-    //   const node = path.node
-    //   if (node.key.name.indexOf('render') !== -1 && node.key.name !== 'render') {
-    //     if (Array.isArray(node.params)) {
-    //       node.params.unshift(types.identifier('h'))
-    //     } else {
-    //       node.params = [types.identifier('h')]
-    //     }
-    //   }
-    // }
+      const html = vueTemplate.getVueBuildHTMLTemplate(imports, filePath,true)
+      createPage(p.join(outPath, e), html)
+    }else {
+      const imports = scanImport(filePath, true)
+      imports.local.unshift(filePath)
+      imports.local.forEach((el) => {
+        const cwd = process.cwd()
+        const target = p.join(cwd, outPath, 'static')
+        const end = p.join(target, el)
+        mkdir(target, el)
+        fs.writeFileSync(end, cache.get(el), 'utf-8')
+      })
+      const html = getBuildHTMLTemplate(imports, depend)
+      createPage(p.join(outPath, e), html)
+    }
   })
-  const text = babel.transformFromAstSync(ast, tranform.code)
-  return text.code
 }
 
 function getScriptText(content) {
-  return content.match(/<script.*?>([\s\S]+?)<\/script>/)[0].replace('<script>','<script type="text/javascript">')
+  const match = content.match(/<script.*?>([\s\S]+?)<\/script>/)
+  return match ? match[0].replace('<script>', '<script type="text/javascript">').replace('<script type="text/javascript">', '').replace('</script>', '') : ''
 }
 
-function getStylesContent(content) {
+function loadLess(content) {
+  const text = content.replace('<style lang="less">', '').replace('</style>','')
+  return new Promise((resolve, reject) => {
+    less.render(text,(error,output)=>{
+      resolve(`${output.css}`)
+    })
+  });
+}
+
+async function getStylesContent(content) {
   const match = content.match(/<style.*?>([\s\S]+?)<\/style>/)
-  return match ? match[0] : ''
+  return match ? await loadLess(match[0]) : ''
 }
 
 function getTemplate(content) {
@@ -208,19 +221,27 @@ function getTemplate(content) {
   return match ? match[0] : ''
 }
 
-function scanVueImport (path) {
-  const content = fs.readFileSync(path,'utf-8')
-  const template = getTemplate(content)
-  const scriptText = getScriptText(content)
-  const text = scriptText.replace('<script type="text/javascript">','').replace('</script>','')
-  const vueContent = loadVueAST(text)
-  const script = `<script type="text/javascript">${vueContent}</script>`
-  const style = getStylesContent(content)
-  return {
-    script,
-    style,
-    template
-  }
+async function getFileStylesData(local) {
+  return new Promise(async(resolve, reject) => {
+    let arr = []
+    for (let i = 0; i < local.length; i++) {
+      const select = local[i]
+      const content = fs.readFileSync(select, 'utf-8')
+      const styleData = await getStylesContent(content)
+      if (styleData) {
+        arr.push(styleData)
+      }
+    }    
+    resolve(arr)
+  });
+}
+
+async function scanVueImport (path) {
+  const imports = VueBabel.loadImportFormAST.call(this,path)
+  imports.local.push(path)
+  const styles = await getFileStylesData(imports.local)
+  imports.styles = styles
+  return imports
 }
 
 module.exports = {
@@ -235,5 +256,11 @@ module.exports = {
   // 遍历文件夹
   traversalFolder,
   // 扫描vue导入文件
-  scanVueImport
+  scanVueImport,
+  // 返回空的imports结构
+  getImportObj,
+  // 返回脚本内容
+  getScriptText,
+  // 返回模板
+  getTemplate
 }
