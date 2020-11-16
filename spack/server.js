@@ -75,6 +75,7 @@ class Server {
         return this.sendHTML('', res)
       }
     } catch (error) {
+      console.log('err',error.message)
       const html = template.getEmptyHTMLTemplate().replace('%%%before_injection%%%', '').replace('%%%script_link%%%', '').replace('%%%after_injection%%%','')
       return res.send(html)
     }
