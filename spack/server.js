@@ -54,6 +54,12 @@ class Server {
     res.end()
   }
 
+  sendImage(filePath, res) {
+    const fileData = fs.readFileSync(filePath)
+    res.writeHead(200, { 'Content-Type': 'image/png' });
+    res.end(fileData);
+  }
+
 _serverCallBack = async(req, res) => {
     const { rootPath = 'src/pages', depend = {}} = this.config
     try {
@@ -75,15 +81,23 @@ _serverCallBack = async(req, res) => {
           throw new Error('未找到指定文件路径:' + path)
         }
       } else if (req.url !== '/favicon.ico') {
-        if (req.url.indexOf('.css') !== -1) {
+        const ext = p.extname(req.url)
+        if (ext == '.css') {
           return this.sendHTML(cache.get(req.url.slice(1)), res,'css')
-        }else {
+        }else if (ext == '.png' || ext == '.jpeg' || ext == '.jpg') {
+          if (req.url.indexOf('src') == -1) {
+            return this.sendImage('src/' + req.url.slice(1), res, 'png')
+          }else {
+            return this.sendImage(req.url.slice(1), res, 'png')
+          }
+        } else {
           return this.sendHTML(cache.get(req.url.slice(1)), res)
         }
       } else {
         return this.sendHTML('', res)
       }
     } catch (error) {
+      console.log('编译报错', error.message)
       const html = template.getEmptyHTMLTemplate().replace('%%%before_injection%%%', '').replace('%%%script_link%%%', '').replace('%%%after_injection%%%','')
       return res.send(html)
     }

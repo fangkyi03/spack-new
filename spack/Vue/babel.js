@@ -86,6 +86,58 @@ function loadImportFormAST(dirPath) {
             if (node.leadingComments) {
                 delete node.leadingComments
             }
+        },
+        CallExpression(path) {
+            const node = path.node 
+            if (node.callee.name == 'require') {
+                const dir = p.join(dirPath,'../',node.arguments[0].value)
+                path.replaceWith(types.stringLiteral(dir))
+            } else if (node.callee.name == 'h' && node.arguments && node.arguments[0].value.indexOf('An') !== -1) {
+                const viewtype = node.arguments[0].value.replace('An','')
+                const attrsTemplate = babel.template('{attrs:{viewtype:%%viewtype%%}}')
+                node.arguments[0] = types.identifier('Container')
+                const arg1 = Object.assign({},node.arguments[1])
+                if (node.arguments.length == 1) {
+                    node.arguments[1] = types.objectExpression([
+                        types.objectProperty(types.stringLiteral('attrs'),
+                            types.objectExpression(
+                                [
+                                    types.objectProperty(types.stringLiteral('viewtype'), types.stringLiteral(viewtype)),
+                                ]
+                            )
+                        )]
+                    )
+                }else {
+                    if (node.arguments[1].type == 'ObjectExpression') {
+                        node.arguments[1] = types.objectExpression([
+                            types.objectProperty(types.stringLiteral('attrs'),
+                                types.objectExpression(
+                                    [
+                                        types.objectProperty(types.stringLiteral('viewtype'), types.stringLiteral(viewtype)),
+                                        types.obje(types.stringLiteral('obj'), arg1.properties ? arg1.properties : types.arrayExpression([])),
+                                    ]
+                                )
+                            )]
+                        )
+                    }else {
+                        node.arguments[1] = types.objectExpression([
+                            types.objectProperty(types.stringLiteral('attrs'),
+                                types.objectExpression(
+                                    [
+                                        types.objectProperty(types.stringLiteral('viewtype'), types.stringLiteral(viewtype)),
+                                        types.objectProperty(types.stringLiteral('obj'), arg1.properties ? arg1.properties : types.arrayExpression([])),
+                                    ]
+                                )
+                            )]
+                        )
+                        node.arguments.push(arg1)
+                    }
+                }
+            }
+        },
+        JSXOpeningElement(path) {
+            const node = path.node
+            console.log('asas')
         }
     })
     const text = babel.transformFromAstSync(ast, tranform.code)
