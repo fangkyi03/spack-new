@@ -1,0 +1,2413 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@babel/core': ^7.12.3
+  '@babel/plugin-proposal-class-properties': ^7.12.1
+  '@babel/plugin-proposal-decorators': ^7.12.1
+  '@babel/preset-react': ^7.12.1
+  '@babel/traverse': ^7.12.1
+  '@babel/types': ^7.12.1
+  '@types/antd': ^1.0.0
+  '@vue/babel-preset-jsx': ^1.2.4
+  chokidar: ^3.4.3
+  etag: ^1.8.1
+  express: ^4.17.1
+  less: ^4.1.2
+  mime-types: ^2.1.27
+  nodejs-websocket: ^1.7.2
+  open: ^7.3.0
+  path: ^0.12.7
+  watch: ^1.0.2
+  ws: ^7.3.1
+
+dependencies:
+  less: rg.cnpmjs.org/less/4.1.2
+
+devDependencies:
+  '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+  '@babel/plugin-proposal-class-properties': rg.cnpmjs.org/@babel/plugin-proposal-class-properties/7.16.5_@babel+core@7.16.5
+  '@babel/plugin-proposal-decorators': rg.cnpmjs.org/@babel/plugin-proposal-decorators/7.16.5_@babel+core@7.16.5
+  '@babel/preset-react': rg.cnpmjs.org/@babel/preset-react/7.16.5_@babel+core@7.16.5
+  '@babel/traverse': rg.cnpmjs.org/@babel/traverse/7.16.5
+  '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+  '@types/antd': rg.cnpmjs.org/@types/antd/1.0.0
+  '@vue/babel-preset-jsx': rg.cnpmjs.org/@vue/babel-preset-jsx/1.2.4_@babel+core@7.16.5
+  chokidar: rg.cnpmjs.org/chokidar/3.5.2
+  etag: rg.cnpmjs.org/etag/1.8.1
+  express: rg.cnpmjs.org/express/4.17.2
+  mime-types: rg.cnpmjs.org/mime-types/2.1.34
+  nodejs-websocket: rg.cnpmjs.org/nodejs-websocket/1.7.2
+  open: rg.cnpmjs.org/open/7.4.2
+  path: rg.cnpmjs.org/path/0.12.7
+  watch: rg.cnpmjs.org/watch/1.0.2
+  ws: rg.cnpmjs.org/ws/7.5.6
+
+packages:
+
+  rg.cnpmjs.org/@ant-design/colors/6.0.0:
+    resolution: {integrity: sha1-m5NmJXz/zEfbQrnQIDu1ksE8Apg=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@ant-design/colors/download/@ant-design/colors-6.0.0.tgz}
+    name: '@ant-design/colors'
+    version: 6.0.0
+    dependencies:
+      '@ctrl/tinycolor': rg.cnpmjs.org/@ctrl/tinycolor/3.4.0
+    dev: true
+
+  rg.cnpmjs.org/@ant-design/icons-svg/4.2.1:
+    resolution: {integrity: sha1-hjDajrRHGkqr2u19H/apfcss8Fo=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@ant-design/icons-svg/download/@ant-design/icons-svg-4.2.1.tgz}
+    name: '@ant-design/icons-svg'
+    version: 4.2.1
+    dev: true
+
+  rg.cnpmjs.org/@ant-design/icons/4.7.0:
+    resolution: {integrity: sha1-jDy+ClVrqSr13H0ecMCyW1F5rw8=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@ant-design/icons/download/@ant-design/icons-4.7.0.tgz}
+    name: '@ant-design/icons'
+    version: 4.7.0
+    engines: {node: '>=8'}
+    peerDependencies:
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      '@ant-design/colors': rg.cnpmjs.org/@ant-design/colors/6.0.0
+      '@ant-design/icons-svg': rg.cnpmjs.org/@ant-design/icons-svg/4.2.1
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/@ant-design/react-slick/0.28.4:
+    resolution: {integrity: sha1-iylrh618euh38qUnuBt+69ndKak=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@ant-design/react-slick/download/@ant-design/react-slick-0.28.4.tgz}
+    name: '@ant-design/react-slick'
+    version: 0.28.4
+    peerDependencies:
+      react: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      json2mq: rg.cnpmjs.org/json2mq/0.2.0
+      lodash: rg.cnpmjs.org/lodash/4.17.21
+      resize-observer-polyfill: rg.cnpmjs.org/resize-observer-polyfill/1.5.1
+    dev: true
+
+  rg.cnpmjs.org/@babel/code-frame/7.16.0:
+    resolution: {integrity: sha1-DfyAMJvuyEEeZecGRhxAiwu5tDE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/code-frame/download/@babel/code-frame-7.16.0.tgz}
+    name: '@babel/code-frame'
+    version: 7.16.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/highlight': rg.cnpmjs.org/@babel/highlight/7.16.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/compat-data/7.16.4:
+    resolution: {integrity: sha512-1o/jo7D+kC9ZjHX5v+EHrdjl3PhxMrLSOTGsOdHJ+KL8HCaEK6ehrVL2RS6oHDZp+L7xLirLrPmQtEng769J/Q==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/compat-data/download/@babel/compat-data-7.16.4.tgz}
+    name: '@babel/compat-data'
+    version: 7.16.4
+    engines: {node: '>=6.9.0'}
+    dev: true
+
+  rg.cnpmjs.org/@babel/core/7.16.5:
+    resolution: {integrity: sha512-wUcenlLzuWMZ9Zt8S0KmFwGlH6QKRh3vsm/dhDA3CHkiTA45YuG1XkHRcNRl73EFPXDp/d5kVOU0/y7x2w6OaQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/core/download/@babel/core-7.16.5.tgz}
+    name: '@babel/core'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/code-frame': rg.cnpmjs.org/@babel/code-frame/7.16.0
+      '@babel/generator': rg.cnpmjs.org/@babel/generator/7.16.5
+      '@babel/helper-compilation-targets': rg.cnpmjs.org/@babel/helper-compilation-targets/7.16.3_@babel+core@7.16.5
+      '@babel/helper-module-transforms': rg.cnpmjs.org/@babel/helper-module-transforms/7.16.5
+      '@babel/helpers': rg.cnpmjs.org/@babel/helpers/7.16.5
+      '@babel/parser': rg.cnpmjs.org/@babel/parser/7.16.6
+      '@babel/template': rg.cnpmjs.org/@babel/template/7.16.0
+      '@babel/traverse': rg.cnpmjs.org/@babel/traverse/7.16.5
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+      convert-source-map: rg.cnpmjs.org/convert-source-map/1.8.0
+      debug: rg.cnpmjs.org/debug/4.3.3
+      gensync: rg.cnpmjs.org/gensync/1.0.0-beta.2
+      json5: rg.cnpmjs.org/json5/2.2.0
+      semver: rg.cnpmjs.org/semver/6.3.0
+      source-map: rg.cnpmjs.org/source-map/0.5.7
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  rg.cnpmjs.org/@babel/generator/7.16.5:
+    resolution: {integrity: sha512-kIvCdjZqcdKqoDbVVdt5R99icaRtrtYhYK/xux5qiWCBmfdvEYMFZ68QCrpE5cbFM1JsuArUNs1ZkuKtTtUcZA==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/generator/download/@babel/generator-7.16.5.tgz}
+    name: '@babel/generator'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+      jsesc: rg.cnpmjs.org/jsesc/2.5.2
+      source-map: rg.cnpmjs.org/source-map/0.5.7
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-annotate-as-pure/7.16.0:
+    resolution: {integrity: sha1-mh8OvNpT2aLQAQjEzqzmpdXx8I0=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-annotate-as-pure/download/@babel/helper-annotate-as-pure-7.16.0.tgz}
+    name: '@babel/helper-annotate-as-pure'
+    version: 7.16.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-compilation-targets/7.16.3_@babel+core@7.16.5:
+    resolution: {integrity: sha512-vKsoSQAyBmxS35JUOOt+07cLc6Nk/2ljLIHwmq2/NM6hdioUaqEXq/S+nXvbvXbZkNDlWOymPanJGOc4CBjSJA==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-compilation-targets/download/@babel/helper-compilation-targets-7.16.3.tgz}
+    id: rg.cnpmjs.org/@babel/helper-compilation-targets/7.16.3
+    name: '@babel/helper-compilation-targets'
+    version: 7.16.3
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/compat-data': rg.cnpmjs.org/@babel/compat-data/7.16.4
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/helper-validator-option': rg.cnpmjs.org/@babel/helper-validator-option/7.14.5
+      browserslist: rg.cnpmjs.org/browserslist/4.19.1
+      semver: rg.cnpmjs.org/semver/6.3.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-create-class-features-plugin/7.16.5_@babel+core@7.16.5:
+    resolution: {integrity: sha512-NEohnYA7mkB8L5JhU7BLwcBdU3j83IziR9aseMueWGeAjblbul3zzb8UvJ3a1zuBiqCMObzCJHFqKIQE6hTVmg==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-create-class-features-plugin/download/@babel/helper-create-class-features-plugin-7.16.5.tgz}
+    id: rg.cnpmjs.org/@babel/helper-create-class-features-plugin/7.16.5
+    name: '@babel/helper-create-class-features-plugin'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/helper-annotate-as-pure': rg.cnpmjs.org/@babel/helper-annotate-as-pure/7.16.0
+      '@babel/helper-environment-visitor': rg.cnpmjs.org/@babel/helper-environment-visitor/7.16.5
+      '@babel/helper-function-name': rg.cnpmjs.org/@babel/helper-function-name/7.16.0
+      '@babel/helper-member-expression-to-functions': rg.cnpmjs.org/@babel/helper-member-expression-to-functions/7.16.5
+      '@babel/helper-optimise-call-expression': rg.cnpmjs.org/@babel/helper-optimise-call-expression/7.16.0
+      '@babel/helper-replace-supers': rg.cnpmjs.org/@babel/helper-replace-supers/7.16.5
+      '@babel/helper-split-export-declaration': rg.cnpmjs.org/@babel/helper-split-export-declaration/7.16.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-environment-visitor/7.16.5:
+    resolution: {integrity: sha512-ODQyc5AnxmZWm/R2W7fzhamOk1ey8gSguo5SGvF0zcB3uUzRpTRmM/jmLSm9bDMyPlvbyJ+PwPEK0BWIoZ9wjg==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-environment-visitor/download/@babel/helper-environment-visitor-7.16.5.tgz}
+    name: '@babel/helper-environment-visitor'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-function-name/7.16.0:
+    resolution: {integrity: sha1-t90Hl9ALv+5PB+nE6lsOMMi7FIE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-function-name/download/@babel/helper-function-name-7.16.0.tgz}
+    name: '@babel/helper-function-name'
+    version: 7.16.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-get-function-arity': rg.cnpmjs.org/@babel/helper-get-function-arity/7.16.0
+      '@babel/template': rg.cnpmjs.org/@babel/template/7.16.0
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-get-function-arity/7.16.0:
+    resolution: {integrity: sha1-AIjHSGspqctdlIsaHeRttm4InPo=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-get-function-arity/download/@babel/helper-get-function-arity-7.16.0.tgz}
+    name: '@babel/helper-get-function-arity'
+    version: 7.16.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-hoist-variables/7.16.0:
+    resolution: {integrity: sha1-TJAjwvHe9+KP9G/B2802o5vqqBo=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-hoist-variables/download/@babel/helper-hoist-variables-7.16.0.tgz}
+    name: '@babel/helper-hoist-variables'
+    version: 7.16.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-member-expression-to-functions/7.16.5:
+    resolution: {integrity: sha512-7fecSXq7ZrLE+TWshbGT+HyCLkxloWNhTbU2QM1NTI/tDqyf0oZiMcEfYtDuUDCo528EOlt39G1rftea4bRZIw==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-member-expression-to-functions/download/@babel/helper-member-expression-to-functions-7.16.5.tgz}
+    name: '@babel/helper-member-expression-to-functions'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-module-imports/7.16.0:
+    resolution: {integrity: sha1-kFOOYLZy7PG0SPX09UM9N+eaPsM=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-module-imports/download/@babel/helper-module-imports-7.16.0.tgz}
+    name: '@babel/helper-module-imports'
+    version: 7.16.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-module-transforms/7.16.5:
+    resolution: {integrity: sha512-CkvMxgV4ZyyioElFwcuWnDCcNIeyqTkCm9BxXZi73RR1ozqlpboqsbGUNvRTflgZtFbbJ1v5Emvm+lkjMYY/LQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-module-transforms/download/@babel/helper-module-transforms-7.16.5.tgz}
+    name: '@babel/helper-module-transforms'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-environment-visitor': rg.cnpmjs.org/@babel/helper-environment-visitor/7.16.5
+      '@babel/helper-module-imports': rg.cnpmjs.org/@babel/helper-module-imports/7.16.0
+      '@babel/helper-simple-access': rg.cnpmjs.org/@babel/helper-simple-access/7.16.0
+      '@babel/helper-split-export-declaration': rg.cnpmjs.org/@babel/helper-split-export-declaration/7.16.0
+      '@babel/helper-validator-identifier': rg.cnpmjs.org/@babel/helper-validator-identifier/7.15.7
+      '@babel/template': rg.cnpmjs.org/@babel/template/7.16.0
+      '@babel/traverse': rg.cnpmjs.org/@babel/traverse/7.16.5
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-optimise-call-expression/7.16.0:
+    resolution: {integrity: sha1-zs2xRdcMVAlrFWT46fEM19GTszg=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-optimise-call-expression/download/@babel/helper-optimise-call-expression-7.16.0.tgz}
+    name: '@babel/helper-optimise-call-expression'
+    version: 7.16.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-plugin-utils/7.16.5:
+    resolution: {integrity: sha512-59KHWHXxVA9K4HNF4sbHCf+eJeFe0Te/ZFGqBT4OjXhrwvA04sGfaEGsVTdsjoszq0YTP49RC9UKe5g8uN2RwQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-plugin-utils/download/@babel/helper-plugin-utils-7.16.5.tgz}
+    name: '@babel/helper-plugin-utils'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-replace-supers/7.16.5:
+    resolution: {integrity: sha512-ao3seGVa/FZCMCCNDuBcqnBFSbdr8N2EW35mzojx3TwfIbdPmNK+JV6+2d5bR0Z71W5ocLnQp9en/cTF7pBJiQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-replace-supers/download/@babel/helper-replace-supers-7.16.5.tgz}
+    name: '@babel/helper-replace-supers'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-environment-visitor': rg.cnpmjs.org/@babel/helper-environment-visitor/7.16.5
+      '@babel/helper-member-expression-to-functions': rg.cnpmjs.org/@babel/helper-member-expression-to-functions/7.16.5
+      '@babel/helper-optimise-call-expression': rg.cnpmjs.org/@babel/helper-optimise-call-expression/7.16.0
+      '@babel/traverse': rg.cnpmjs.org/@babel/traverse/7.16.5
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-simple-access/7.16.0:
+    resolution: {integrity: sha1-IdaidiDjg+N1NM9sELugGab5BRc=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-simple-access/download/@babel/helper-simple-access-7.16.0.tgz}
+    name: '@babel/helper-simple-access'
+    version: 7.16.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-split-export-declaration/7.16.0:
+    resolution: {integrity: sha1-KWcvQ2Y+k23zcKrrIr7ds7rsdDg=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-split-export-declaration/download/@babel/helper-split-export-declaration-7.16.0.tgz}
+    name: '@babel/helper-split-export-declaration'
+    version: 7.16.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-validator-identifier/7.15.7:
+    resolution: {integrity: sha1-Ig35k7/pBKSmsCq08zhaXr9uI4k=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-validator-identifier/download/@babel/helper-validator-identifier-7.15.7.tgz}
+    name: '@babel/helper-validator-identifier'
+    version: 7.15.7
+    engines: {node: '>=6.9.0'}
+    dev: true
+
+  rg.cnpmjs.org/@babel/helper-validator-option/7.14.5:
+    resolution: {integrity: sha1-bnKh//GNXfy4eOHmLxoCHEty1aM=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helper-validator-option/download/@babel/helper-validator-option-7.14.5.tgz}
+    name: '@babel/helper-validator-option'
+    version: 7.14.5
+    engines: {node: '>=6.9.0'}
+    dev: true
+
+  rg.cnpmjs.org/@babel/helpers/7.16.5:
+    resolution: {integrity: sha512-TLgi6Lh71vvMZGEkFuIxzaPsyeYCHQ5jJOOX1f0xXn0uciFuE8cEk0wyBquMcCxBXZ5BJhE2aUB7pnWTD150Tw==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/helpers/download/@babel/helpers-7.16.5.tgz}
+    name: '@babel/helpers'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/template': rg.cnpmjs.org/@babel/template/7.16.0
+      '@babel/traverse': rg.cnpmjs.org/@babel/traverse/7.16.5
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  rg.cnpmjs.org/@babel/highlight/7.16.0:
+    resolution: {integrity: sha1-bOsysspLj182H7f9gh4/3fShclo=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/highlight/download/@babel/highlight-7.16.0.tgz}
+    name: '@babel/highlight'
+    version: 7.16.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-validator-identifier': rg.cnpmjs.org/@babel/helper-validator-identifier/7.15.7
+      chalk: rg.cnpmjs.org/chalk/2.4.2
+      js-tokens: rg.cnpmjs.org/js-tokens/4.0.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/parser/7.16.6:
+    resolution: {integrity: sha512-Gr86ujcNuPDnNOY8mi383Hvi8IYrJVJYuf3XcuBM/Dgd+bINn/7tHqsj+tKkoreMbmGsFLsltI/JJd8fOFWGDQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/parser/download/@babel/parser-7.16.6.tgz}
+    name: '@babel/parser'
+    version: 7.16.6
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+    dev: true
+
+  rg.cnpmjs.org/@babel/plugin-proposal-class-properties/7.16.5_@babel+core@7.16.5:
+    resolution: {integrity: sha512-pJD3HjgRv83s5dv1sTnDbZOaTjghKEz8KUn1Kbh2eAIRhGuyQ1XSeI4xVXU3UlIEVA3DAyIdxqT1eRn7Wcn55A==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/plugin-proposal-class-properties/download/@babel/plugin-proposal-class-properties-7.16.5.tgz}
+    id: rg.cnpmjs.org/@babel/plugin-proposal-class-properties/7.16.5
+    name: '@babel/plugin-proposal-class-properties'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/helper-create-class-features-plugin': rg.cnpmjs.org/@babel/helper-create-class-features-plugin/7.16.5_@babel+core@7.16.5
+      '@babel/helper-plugin-utils': rg.cnpmjs.org/@babel/helper-plugin-utils/7.16.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  rg.cnpmjs.org/@babel/plugin-proposal-decorators/7.16.5_@babel+core@7.16.5:
+    resolution: {integrity: sha512-XAiZll5oCdp2Dd2RbXA3LVPlFyIRhhcQy+G34p9ePpl6mjFkbqHAYHovyw2j5mqUrlBf0/+MtOIJ3JGYtz8qaw==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/plugin-proposal-decorators/download/@babel/plugin-proposal-decorators-7.16.5.tgz}
+    id: rg.cnpmjs.org/@babel/plugin-proposal-decorators/7.16.5
+    name: '@babel/plugin-proposal-decorators'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/helper-create-class-features-plugin': rg.cnpmjs.org/@babel/helper-create-class-features-plugin/7.16.5_@babel+core@7.16.5
+      '@babel/helper-plugin-utils': rg.cnpmjs.org/@babel/helper-plugin-utils/7.16.5
+      '@babel/plugin-syntax-decorators': rg.cnpmjs.org/@babel/plugin-syntax-decorators/7.16.5_@babel+core@7.16.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  rg.cnpmjs.org/@babel/plugin-syntax-decorators/7.16.5_@babel+core@7.16.5:
+    resolution: {integrity: sha512-3CbYTXfflvyy8O819uhZcZSMedZG4J8yS/NLTc/8T24M9ke1GssTGvg8VZu3Yn2LU5IyQSv1CmPq0a9JWHXJwg==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/plugin-syntax-decorators/download/@babel/plugin-syntax-decorators-7.16.5.tgz}
+    id: rg.cnpmjs.org/@babel/plugin-syntax-decorators/7.16.5
+    name: '@babel/plugin-syntax-decorators'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/helper-plugin-utils': rg.cnpmjs.org/@babel/helper-plugin-utils/7.16.5
+    dev: true
+
+  rg.cnpmjs.org/@babel/plugin-syntax-jsx/7.16.5_@babel+core@7.16.5:
+    resolution: {integrity: sha512-42OGssv9NPk4QHKVgIHlzeLgPOW5rGgfV5jzG90AhcXXIv6hu/eqj63w4VgvRxdvZY3AlYeDgPiSJ3BqAd1Y6Q==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/plugin-syntax-jsx/download/@babel/plugin-syntax-jsx-7.16.5.tgz}
+    id: rg.cnpmjs.org/@babel/plugin-syntax-jsx/7.16.5
+    name: '@babel/plugin-syntax-jsx'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/helper-plugin-utils': rg.cnpmjs.org/@babel/helper-plugin-utils/7.16.5
+    dev: true
+
+  rg.cnpmjs.org/@babel/plugin-transform-react-display-name/7.16.5_@babel+core@7.16.5:
+    resolution: {integrity: sha512-dHYCOnzSsXFz8UcdNQIHGvg94qPL/teF7CCiCEMRxmA1G2p5Mq4JnKVowCDxYfiQ9D7RstaAp9kwaSI+sXbnhw==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/plugin-transform-react-display-name/download/@babel/plugin-transform-react-display-name-7.16.5.tgz}
+    id: rg.cnpmjs.org/@babel/plugin-transform-react-display-name/7.16.5
+    name: '@babel/plugin-transform-react-display-name'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/helper-plugin-utils': rg.cnpmjs.org/@babel/helper-plugin-utils/7.16.5
+    dev: true
+
+  rg.cnpmjs.org/@babel/plugin-transform-react-jsx-development/7.16.5_@babel+core@7.16.5:
+    resolution: {integrity: sha512-uQSLacMZSGLCxOw20dzo1dmLlKkd+DsayoV54q3MHXhbqgPzoiGerZQgNPl/Ro8/OcXV2ugfnkx+rxdS0sN5Uw==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/plugin-transform-react-jsx-development/download/@babel/plugin-transform-react-jsx-development-7.16.5.tgz}
+    id: rg.cnpmjs.org/@babel/plugin-transform-react-jsx-development/7.16.5
+    name: '@babel/plugin-transform-react-jsx-development'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/plugin-transform-react-jsx': rg.cnpmjs.org/@babel/plugin-transform-react-jsx/7.16.5_@babel+core@7.16.5
+    dev: true
+
+  rg.cnpmjs.org/@babel/plugin-transform-react-jsx/7.16.5_@babel+core@7.16.5:
+    resolution: {integrity: sha512-+arLIz1d7kmwX0fKxTxbnoeG85ONSnLpvdODa4P3pc1sS7CV1hfmtYWufkW/oYsPnkDrEeQFxhUWcFnrXW7jQQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/plugin-transform-react-jsx/download/@babel/plugin-transform-react-jsx-7.16.5.tgz}
+    id: rg.cnpmjs.org/@babel/plugin-transform-react-jsx/7.16.5
+    name: '@babel/plugin-transform-react-jsx'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/helper-annotate-as-pure': rg.cnpmjs.org/@babel/helper-annotate-as-pure/7.16.0
+      '@babel/helper-module-imports': rg.cnpmjs.org/@babel/helper-module-imports/7.16.0
+      '@babel/helper-plugin-utils': rg.cnpmjs.org/@babel/helper-plugin-utils/7.16.5
+      '@babel/plugin-syntax-jsx': rg.cnpmjs.org/@babel/plugin-syntax-jsx/7.16.5_@babel+core@7.16.5
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/plugin-transform-react-pure-annotations/7.16.5_@babel+core@7.16.5:
+    resolution: {integrity: sha512-0nYU30hCxnCVCbRjSy9ahlhWZ2Sn6khbY4FqR91W+2RbSqkWEbVu2gXh45EqNy4Bq7sRU+H4i0/6YKwOSzh16A==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/plugin-transform-react-pure-annotations/download/@babel/plugin-transform-react-pure-annotations-7.16.5.tgz}
+    id: rg.cnpmjs.org/@babel/plugin-transform-react-pure-annotations/7.16.5
+    name: '@babel/plugin-transform-react-pure-annotations'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/helper-annotate-as-pure': rg.cnpmjs.org/@babel/helper-annotate-as-pure/7.16.0
+      '@babel/helper-plugin-utils': rg.cnpmjs.org/@babel/helper-plugin-utils/7.16.5
+    dev: true
+
+  rg.cnpmjs.org/@babel/preset-react/7.16.5_@babel+core@7.16.5:
+    resolution: {integrity: sha512-3kzUOQeaxY/2vhPDS7CX/KGEGu/1bOYGvdRDJ2U5yjEz5o5jmIeTPLoiQBPGjfhPascLuW5OlMiPzwOOuB6txg==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/preset-react/download/@babel/preset-react-7.16.5.tgz}
+    id: rg.cnpmjs.org/@babel/preset-react/7.16.5
+    name: '@babel/preset-react'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/helper-plugin-utils': rg.cnpmjs.org/@babel/helper-plugin-utils/7.16.5
+      '@babel/helper-validator-option': rg.cnpmjs.org/@babel/helper-validator-option/7.14.5
+      '@babel/plugin-transform-react-display-name': rg.cnpmjs.org/@babel/plugin-transform-react-display-name/7.16.5_@babel+core@7.16.5
+      '@babel/plugin-transform-react-jsx': rg.cnpmjs.org/@babel/plugin-transform-react-jsx/7.16.5_@babel+core@7.16.5
+      '@babel/plugin-transform-react-jsx-development': rg.cnpmjs.org/@babel/plugin-transform-react-jsx-development/7.16.5_@babel+core@7.16.5
+      '@babel/plugin-transform-react-pure-annotations': rg.cnpmjs.org/@babel/plugin-transform-react-pure-annotations/7.16.5_@babel+core@7.16.5
+    dev: true
+
+  rg.cnpmjs.org/@babel/runtime/7.16.5:
+    resolution: {integrity: sha512-TXWihFIS3Pyv5hzR7j6ihmeLkZfrXGxAr5UfSl8CHf+6q/wpiYDkUau0czckpYG8QmnCIuPpdLtuA9VmuGGyMA==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/runtime/download/@babel/runtime-7.16.5.tgz}
+    name: '@babel/runtime'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: rg.cnpmjs.org/regenerator-runtime/0.13.9
+    dev: true
+
+  rg.cnpmjs.org/@babel/template/7.16.0:
+    resolution: {integrity: sha1-0Wo16/TNdOICCDNW+rId2JNj3dY=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/template/download/@babel/template-7.16.0.tgz}
+    name: '@babel/template'
+    version: 7.16.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/code-frame': rg.cnpmjs.org/@babel/code-frame/7.16.0
+      '@babel/parser': rg.cnpmjs.org/@babel/parser/7.16.6
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+    dev: true
+
+  rg.cnpmjs.org/@babel/traverse/7.16.5:
+    resolution: {integrity: sha512-FOCODAzqUMROikDYLYxl4nmwiLlu85rNqBML/A5hKRVXG2LV8d0iMqgPzdYTcIpjZEBB7D6UDU9vxRZiriASdQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/traverse/download/@babel/traverse-7.16.5.tgz}
+    name: '@babel/traverse'
+    version: 7.16.5
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/code-frame': rg.cnpmjs.org/@babel/code-frame/7.16.0
+      '@babel/generator': rg.cnpmjs.org/@babel/generator/7.16.5
+      '@babel/helper-environment-visitor': rg.cnpmjs.org/@babel/helper-environment-visitor/7.16.5
+      '@babel/helper-function-name': rg.cnpmjs.org/@babel/helper-function-name/7.16.0
+      '@babel/helper-hoist-variables': rg.cnpmjs.org/@babel/helper-hoist-variables/7.16.0
+      '@babel/helper-split-export-declaration': rg.cnpmjs.org/@babel/helper-split-export-declaration/7.16.0
+      '@babel/parser': rg.cnpmjs.org/@babel/parser/7.16.6
+      '@babel/types': rg.cnpmjs.org/@babel/types/7.16.0
+      debug: rg.cnpmjs.org/debug/4.3.3
+      globals: rg.cnpmjs.org/globals/11.12.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  rg.cnpmjs.org/@babel/types/7.16.0:
+    resolution: {integrity: sha1-2zsxOAT5aq3Qt3bEgj4SetZyibo=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@babel/types/download/@babel/types-7.16.0.tgz}
+    name: '@babel/types'
+    version: 7.16.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-validator-identifier': rg.cnpmjs.org/@babel/helper-validator-identifier/7.15.7
+      to-fast-properties: rg.cnpmjs.org/to-fast-properties/2.0.0
+    dev: true
+
+  rg.cnpmjs.org/@ctrl/tinycolor/3.4.0:
+    resolution: {integrity: sha1-w8WuVDyJfKqcKmhjC+01W+X5mQ8=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@ctrl/tinycolor/download/@ctrl/tinycolor-3.4.0.tgz}
+    name: '@ctrl/tinycolor'
+    version: 3.4.0
+    engines: {node: '>=10'}
+    dev: true
+
+  rg.cnpmjs.org/@types/antd/1.0.0:
+    resolution: {integrity: sha1-8E4qhO/Z6pNzZs09+62l08lJRx0=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@types/antd/download/@types/antd-1.0.0.tgz}
+    name: '@types/antd'
+    version: 1.0.0
+    deprecated: This is a stub types definition for antd (https://github.com/ant-design/ant-design). antd provides its own type definitions, so you don't need @types/antd installed!
+    dependencies:
+      antd: rg.cnpmjs.org/antd/4.17.4
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: true
+
+  rg.cnpmjs.org/@vue/babel-helper-vue-jsx-merge-props/1.2.1:
+    resolution: {integrity: sha1-MWJKelBfsU2h1YAjclpMXycOaoE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@vue/babel-helper-vue-jsx-merge-props/download/@vue/babel-helper-vue-jsx-merge-props-1.2.1.tgz}
+    name: '@vue/babel-helper-vue-jsx-merge-props'
+    version: 1.2.1
+    dev: true
+
+  rg.cnpmjs.org/@vue/babel-plugin-transform-vue-jsx/1.2.1_@babel+core@7.16.5:
+    resolution: {integrity: sha1-ZGBGxlLC8CQnJ/NFGdkXsGQEHtc=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@vue/babel-plugin-transform-vue-jsx/download/@vue/babel-plugin-transform-vue-jsx-1.2.1.tgz}
+    id: rg.cnpmjs.org/@vue/babel-plugin-transform-vue-jsx/1.2.1
+    name: '@vue/babel-plugin-transform-vue-jsx'
+    version: 1.2.1
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/helper-module-imports': rg.cnpmjs.org/@babel/helper-module-imports/7.16.0
+      '@babel/plugin-syntax-jsx': rg.cnpmjs.org/@babel/plugin-syntax-jsx/7.16.5_@babel+core@7.16.5
+      '@vue/babel-helper-vue-jsx-merge-props': rg.cnpmjs.org/@vue/babel-helper-vue-jsx-merge-props/1.2.1
+      html-tags: rg.cnpmjs.org/html-tags/2.0.0
+      lodash.kebabcase: rg.cnpmjs.org/lodash.kebabcase/4.1.1
+      svg-tags: rg.cnpmjs.org/svg-tags/1.0.0
+    dev: true
+
+  rg.cnpmjs.org/@vue/babel-preset-jsx/1.2.4_@babel+core@7.16.5:
+    resolution: {integrity: sha1-kv6nnbbxOwHoDToAmeKSS9y+Toc=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@vue/babel-preset-jsx/download/@vue/babel-preset-jsx-1.2.4.tgz}
+    id: rg.cnpmjs.org/@vue/babel-preset-jsx/1.2.4
+    name: '@vue/babel-preset-jsx'
+    version: 1.2.4
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@vue/babel-helper-vue-jsx-merge-props': rg.cnpmjs.org/@vue/babel-helper-vue-jsx-merge-props/1.2.1
+      '@vue/babel-plugin-transform-vue-jsx': rg.cnpmjs.org/@vue/babel-plugin-transform-vue-jsx/1.2.1_@babel+core@7.16.5
+      '@vue/babel-sugar-composition-api-inject-h': rg.cnpmjs.org/@vue/babel-sugar-composition-api-inject-h/1.2.1_@babel+core@7.16.5
+      '@vue/babel-sugar-composition-api-render-instance': rg.cnpmjs.org/@vue/babel-sugar-composition-api-render-instance/1.2.4_@babel+core@7.16.5
+      '@vue/babel-sugar-functional-vue': rg.cnpmjs.org/@vue/babel-sugar-functional-vue/1.2.2_@babel+core@7.16.5
+      '@vue/babel-sugar-inject-h': rg.cnpmjs.org/@vue/babel-sugar-inject-h/1.2.2_@babel+core@7.16.5
+      '@vue/babel-sugar-v-model': rg.cnpmjs.org/@vue/babel-sugar-v-model/1.2.3_@babel+core@7.16.5
+      '@vue/babel-sugar-v-on': rg.cnpmjs.org/@vue/babel-sugar-v-on/1.2.3_@babel+core@7.16.5
+    dev: true
+
+  rg.cnpmjs.org/@vue/babel-sugar-composition-api-inject-h/1.2.1_@babel+core@7.16.5:
+    resolution: {integrity: sha1-BdbgxDJxDjdYKyvppgSbaJtvA+s=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@vue/babel-sugar-composition-api-inject-h/download/@vue/babel-sugar-composition-api-inject-h-1.2.1.tgz}
+    id: rg.cnpmjs.org/@vue/babel-sugar-composition-api-inject-h/1.2.1
+    name: '@vue/babel-sugar-composition-api-inject-h'
+    version: 1.2.1
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/plugin-syntax-jsx': rg.cnpmjs.org/@babel/plugin-syntax-jsx/7.16.5_@babel+core@7.16.5
+    dev: true
+
+  rg.cnpmjs.org/@vue/babel-sugar-composition-api-render-instance/1.2.4_@babel+core@7.16.5:
+    resolution: {integrity: sha1-5MvGmXw0T6wnF4WteikyXFHWjRk=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@vue/babel-sugar-composition-api-render-instance/download/@vue/babel-sugar-composition-api-render-instance-1.2.4.tgz}
+    id: rg.cnpmjs.org/@vue/babel-sugar-composition-api-render-instance/1.2.4
+    name: '@vue/babel-sugar-composition-api-render-instance'
+    version: 1.2.4
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/plugin-syntax-jsx': rg.cnpmjs.org/@babel/plugin-syntax-jsx/7.16.5_@babel+core@7.16.5
+    dev: true
+
+  rg.cnpmjs.org/@vue/babel-sugar-functional-vue/1.2.2_@babel+core@7.16.5:
+    resolution: {integrity: sha1-JnqayNeHyW7b8Dzj85LEnam9Jlg=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@vue/babel-sugar-functional-vue/download/@vue/babel-sugar-functional-vue-1.2.2.tgz}
+    id: rg.cnpmjs.org/@vue/babel-sugar-functional-vue/1.2.2
+    name: '@vue/babel-sugar-functional-vue'
+    version: 1.2.2
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/plugin-syntax-jsx': rg.cnpmjs.org/@babel/plugin-syntax-jsx/7.16.5_@babel+core@7.16.5
+    dev: true
+
+  rg.cnpmjs.org/@vue/babel-sugar-inject-h/1.2.2_@babel+core@7.16.5:
+    resolution: {integrity: sha1-1zjTyJM2fshJHcu2abAAkZKT46o=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@vue/babel-sugar-inject-h/download/@vue/babel-sugar-inject-h-1.2.2.tgz}
+    id: rg.cnpmjs.org/@vue/babel-sugar-inject-h/1.2.2
+    name: '@vue/babel-sugar-inject-h'
+    version: 1.2.2
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/plugin-syntax-jsx': rg.cnpmjs.org/@babel/plugin-syntax-jsx/7.16.5_@babel+core@7.16.5
+    dev: true
+
+  rg.cnpmjs.org/@vue/babel-sugar-v-model/1.2.3_@babel+core@7.16.5:
+    resolution: {integrity: sha1-+h8pulHr8KoabDX6ZtU5vEWaGPI=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@vue/babel-sugar-v-model/download/@vue/babel-sugar-v-model-1.2.3.tgz}
+    id: rg.cnpmjs.org/@vue/babel-sugar-v-model/1.2.3
+    name: '@vue/babel-sugar-v-model'
+    version: 1.2.3
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/plugin-syntax-jsx': rg.cnpmjs.org/@babel/plugin-syntax-jsx/7.16.5_@babel+core@7.16.5
+      '@vue/babel-helper-vue-jsx-merge-props': rg.cnpmjs.org/@vue/babel-helper-vue-jsx-merge-props/1.2.1
+      '@vue/babel-plugin-transform-vue-jsx': rg.cnpmjs.org/@vue/babel-plugin-transform-vue-jsx/1.2.1_@babel+core@7.16.5
+      camelcase: rg.cnpmjs.org/camelcase/5.3.1
+      html-tags: rg.cnpmjs.org/html-tags/2.0.0
+      svg-tags: rg.cnpmjs.org/svg-tags/1.0.0
+    dev: true
+
+  rg.cnpmjs.org/@vue/babel-sugar-v-on/1.2.3_@babel+core@7.16.5:
+    resolution: {integrity: sha1-NCNnF4WGpp85LwS/ujICHQKROto=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/@vue/babel-sugar-v-on/download/@vue/babel-sugar-v-on-1.2.3.tgz}
+    id: rg.cnpmjs.org/@vue/babel-sugar-v-on/1.2.3
+    name: '@vue/babel-sugar-v-on'
+    version: 1.2.3
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': rg.cnpmjs.org/@babel/core/7.16.5
+      '@babel/plugin-syntax-jsx': rg.cnpmjs.org/@babel/plugin-syntax-jsx/7.16.5_@babel+core@7.16.5
+      '@vue/babel-plugin-transform-vue-jsx': rg.cnpmjs.org/@vue/babel-plugin-transform-vue-jsx/1.2.1_@babel+core@7.16.5
+      camelcase: rg.cnpmjs.org/camelcase/5.3.1
+    dev: true
+
+  rg.cnpmjs.org/accepts/1.3.7:
+    resolution: {integrity: sha1-UxvHJlF6OytB+FACHGzBXqq1B80=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/accepts/download/accepts-1.3.7.tgz}
+    name: accepts
+    version: 1.3.7
+    engines: {node: '>= 0.6'}
+    dependencies:
+      mime-types: rg.cnpmjs.org/mime-types/2.1.34
+      negotiator: rg.cnpmjs.org/negotiator/0.6.2
+    dev: true
+
+  rg.cnpmjs.org/ansi-styles/3.2.1:
+    resolution: {integrity: sha1-QfuyAkPlCxK+DwS43tvwdSDOhB0=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/ansi-styles/download/ansi-styles-3.2.1.tgz}
+    name: ansi-styles
+    version: 3.2.1
+    engines: {node: '>=4'}
+    dependencies:
+      color-convert: rg.cnpmjs.org/color-convert/1.9.3
+    dev: true
+
+  rg.cnpmjs.org/antd/4.17.4:
+    resolution: {integrity: sha512-aiWi7TxAc7qAxbL412GSKpkWkL/wIhQe6ABuLLCiE1vqXnGTvav2Z0PiOUdFclZcfz2M2IofsUl2pLVN9I8iCg==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/antd/download/antd-4.17.4.tgz}
+    name: antd
+    version: 4.17.4
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@ant-design/colors': rg.cnpmjs.org/@ant-design/colors/6.0.0
+      '@ant-design/icons': rg.cnpmjs.org/@ant-design/icons/4.7.0
+      '@ant-design/react-slick': rg.cnpmjs.org/@ant-design/react-slick/0.28.4
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      '@ctrl/tinycolor': rg.cnpmjs.org/@ctrl/tinycolor/3.4.0
+      array-tree-filter: rg.cnpmjs.org/array-tree-filter/2.1.0
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      copy-to-clipboard: rg.cnpmjs.org/copy-to-clipboard/3.3.1
+      lodash: rg.cnpmjs.org/lodash/4.17.21
+      memoize-one: rg.cnpmjs.org/memoize-one/6.0.0
+      moment: rg.cnpmjs.org/moment/2.29.1
+      rc-cascader: rg.cnpmjs.org/rc-cascader/2.3.3
+      rc-checkbox: rg.cnpmjs.org/rc-checkbox/2.3.2
+      rc-collapse: rg.cnpmjs.org/rc-collapse/3.1.2
+      rc-dialog: rg.cnpmjs.org/rc-dialog/8.6.0
+      rc-drawer: rg.cnpmjs.org/rc-drawer/4.4.3
+      rc-dropdown: rg.cnpmjs.org/rc-dropdown/3.2.0
+      rc-field-form: rg.cnpmjs.org/rc-field-form/1.21.2
+      rc-image: rg.cnpmjs.org/rc-image/5.2.5
+      rc-input-number: rg.cnpmjs.org/rc-input-number/7.3.4
+      rc-mentions: rg.cnpmjs.org/rc-mentions/1.6.1
+      rc-menu: rg.cnpmjs.org/rc-menu/9.0.14
+      rc-motion: rg.cnpmjs.org/rc-motion/2.4.4
+      rc-notification: rg.cnpmjs.org/rc-notification/4.5.7
+      rc-pagination: rg.cnpmjs.org/rc-pagination/3.1.14
+      rc-picker: rg.cnpmjs.org/rc-picker/2.5.19
+      rc-progress: rg.cnpmjs.org/rc-progress/3.1.4
+      rc-rate: rg.cnpmjs.org/rc-rate/2.9.1
+      rc-resize-observer: rg.cnpmjs.org/rc-resize-observer/1.1.2
+      rc-select: rg.cnpmjs.org/rc-select/13.2.1
+      rc-slider: rg.cnpmjs.org/rc-slider/9.7.5
+      rc-steps: rg.cnpmjs.org/rc-steps/4.1.4
+      rc-switch: rg.cnpmjs.org/rc-switch/3.2.2
+      rc-table: rg.cnpmjs.org/rc-table/7.19.2
+      rc-tabs: rg.cnpmjs.org/rc-tabs/11.10.5
+      rc-textarea: rg.cnpmjs.org/rc-textarea/0.3.6
+      rc-tooltip: rg.cnpmjs.org/rc-tooltip/5.1.1
+      rc-tree: rg.cnpmjs.org/rc-tree/5.3.6
+      rc-tree-select: rg.cnpmjs.org/rc-tree-select/4.8.0
+      rc-trigger: rg.cnpmjs.org/rc-trigger/5.2.10
+      rc-upload: rg.cnpmjs.org/rc-upload/4.3.3
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+      scroll-into-view-if-needed: rg.cnpmjs.org/scroll-into-view-if-needed/2.2.28
+    dev: true
+
+  rg.cnpmjs.org/anymatch/3.1.2:
+    resolution: {integrity: sha1-wFV8CWrzLxBhmPT04qODU343hxY=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/anymatch/download/anymatch-3.1.2.tgz}
+    name: anymatch
+    version: 3.1.2
+    engines: {node: '>= 8'}
+    dependencies:
+      normalize-path: rg.cnpmjs.org/normalize-path/3.0.0
+      picomatch: rg.cnpmjs.org/picomatch/2.3.0
+    dev: true
+
+  rg.cnpmjs.org/array-flatten/1.1.1:
+    resolution: {integrity: sha1-ml9pkFGx5wczKPKgCJaLZOopVdI=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/array-flatten/download/array-flatten-1.1.1.tgz}
+    name: array-flatten
+    version: 1.1.1
+    dev: true
+
+  rg.cnpmjs.org/array-tree-filter/2.1.0:
+    resolution: {integrity: sha1-hzrAD+yDdJ8lWsjdCDgUtPYykZA=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/array-tree-filter/download/array-tree-filter-2.1.0.tgz}
+    name: array-tree-filter
+    version: 2.1.0
+    dev: true
+
+  rg.cnpmjs.org/async-validator/4.0.7:
+    resolution: {integrity: sha1-A0oP0hA6ay6/AQ2nUYO+wpkkev4=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/async-validator/download/async-validator-4.0.7.tgz}
+    name: async-validator
+    version: 4.0.7
+    dev: true
+
+  rg.cnpmjs.org/binary-extensions/2.2.0:
+    resolution: {integrity: sha1-dfUC7q+f/eQvyYgpZFvk6na9ni0=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/binary-extensions/download/binary-extensions-2.2.0.tgz}
+    name: binary-extensions
+    version: 2.2.0
+    engines: {node: '>=8'}
+    dev: true
+
+  rg.cnpmjs.org/body-parser/1.19.1:
+    resolution: {integrity: sha512-8ljfQi5eBk8EJfECMrgqNGWPEY5jWP+1IzkzkGdFFEwFQZZyaZ21UqdaHktgiMlH0xLHqIFtE/u2OYE5dOtViA==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/body-parser/download/body-parser-1.19.1.tgz}
+    name: body-parser
+    version: 1.19.1
+    engines: {node: '>= 0.8'}
+    dependencies:
+      bytes: rg.cnpmjs.org/bytes/3.1.1
+      content-type: rg.cnpmjs.org/content-type/1.0.4
+      debug: rg.cnpmjs.org/debug/2.6.9
+      depd: rg.cnpmjs.org/depd/1.1.2
+      http-errors: rg.cnpmjs.org/http-errors/1.8.1
+      iconv-lite: rg.cnpmjs.org/iconv-lite/0.4.24
+      on-finished: rg.cnpmjs.org/on-finished/2.3.0
+      qs: rg.cnpmjs.org/qs/6.9.6
+      raw-body: rg.cnpmjs.org/raw-body/2.4.2
+      type-is: rg.cnpmjs.org/type-is/1.6.18
+    dev: true
+
+  rg.cnpmjs.org/braces/3.0.2:
+    resolution: {integrity: sha1-NFThpGLujVmeI23zNs2epPiv4Qc=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/braces/download/braces-3.0.2.tgz}
+    name: braces
+    version: 3.0.2
+    engines: {node: '>=8'}
+    dependencies:
+      fill-range: rg.cnpmjs.org/fill-range/7.0.1
+    dev: true
+
+  rg.cnpmjs.org/browserslist/4.19.1:
+    resolution: {integrity: sha512-u2tbbG5PdKRTUoctO3NBD8FQ5HdPh1ZXPHzp1rwaa5jTc+RV9/+RlWiAIKmjRPQF+xbGM9Kklj5bZQFa2s/38A==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/browserslist/download/browserslist-4.19.1.tgz}
+    name: browserslist
+    version: 4.19.1
+    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
+    dependencies:
+      caniuse-lite: rg.cnpmjs.org/caniuse-lite/1.0.30001292
+      electron-to-chromium: rg.cnpmjs.org/electron-to-chromium/1.4.27
+      escalade: rg.cnpmjs.org/escalade/3.1.1
+      node-releases: rg.cnpmjs.org/node-releases/2.0.1
+      picocolors: rg.cnpmjs.org/picocolors/1.0.0
+    dev: true
+
+  rg.cnpmjs.org/bytes/3.1.1:
+    resolution: {integrity: sha512-dWe4nWO/ruEOY7HkUJ5gFt1DCFV9zPRoJr8pV0/ASQermOZjtq8jMjOprC0Kd10GLN+l7xaUPvxzJFWtxGu8Fg==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/bytes/download/bytes-3.1.1.tgz}
+    name: bytes
+    version: 3.1.1
+    engines: {node: '>= 0.8'}
+    dev: true
+
+  rg.cnpmjs.org/camelcase/5.3.1:
+    resolution: {integrity: sha1-48mzFWnhBoEd8kL3FXJaH0xJQyA=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/camelcase/download/camelcase-5.3.1.tgz}
+    name: camelcase
+    version: 5.3.1
+    engines: {node: '>=6'}
+    dev: true
+
+  rg.cnpmjs.org/caniuse-lite/1.0.30001292:
+    resolution: {integrity: sha512-jnT4Tq0Q4ma+6nncYQVe7d73kmDmE9C3OGTx3MvW7lBM/eY1S1DZTMBON7dqV481RhNiS5OxD7k9JQvmDOTirw==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/caniuse-lite/download/caniuse-lite-1.0.30001292.tgz}
+    name: caniuse-lite
+    version: 1.0.30001292
+    dev: true
+
+  rg.cnpmjs.org/chalk/2.4.2:
+    resolution: {integrity: sha1-zUJUFnelQzPPVBpJEIwUMrRMlCQ=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/chalk/download/chalk-2.4.2.tgz}
+    name: chalk
+    version: 2.4.2
+    engines: {node: '>=4'}
+    dependencies:
+      ansi-styles: rg.cnpmjs.org/ansi-styles/3.2.1
+      escape-string-regexp: rg.cnpmjs.org/escape-string-regexp/1.0.5
+      supports-color: rg.cnpmjs.org/supports-color/5.5.0
+    dev: true
+
+  rg.cnpmjs.org/chokidar/3.5.2:
+    resolution: {integrity: sha1-26OXb8rbAW9m/TZQIdkWANAcHnU=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/chokidar/download/chokidar-3.5.2.tgz}
+    name: chokidar
+    version: 3.5.2
+    engines: {node: '>= 8.10.0'}
+    dependencies:
+      anymatch: rg.cnpmjs.org/anymatch/3.1.2
+      braces: rg.cnpmjs.org/braces/3.0.2
+      glob-parent: rg.cnpmjs.org/glob-parent/5.1.2
+      is-binary-path: rg.cnpmjs.org/is-binary-path/2.1.0
+      is-glob: rg.cnpmjs.org/is-glob/4.0.3
+      normalize-path: rg.cnpmjs.org/normalize-path/3.0.0
+      readdirp: rg.cnpmjs.org/readdirp/3.6.0
+    optionalDependencies:
+      fsevents: rg.cnpmjs.org/fsevents/2.3.2
+    dev: true
+
+  rg.cnpmjs.org/classnames/2.3.1:
+    resolution: {integrity: sha1-38+jiR4wbsHa0QXQ6I9EF7hTXo4=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/classnames/download/classnames-2.3.1.tgz}
+    name: classnames
+    version: 2.3.1
+    dev: true
+
+  rg.cnpmjs.org/color-convert/1.9.3:
+    resolution: {integrity: sha1-u3GFBpDh8TZWfeYp0tVHHe2kweg=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/color-convert/download/color-convert-1.9.3.tgz}
+    name: color-convert
+    version: 1.9.3
+    dependencies:
+      color-name: rg.cnpmjs.org/color-name/1.1.3
+    dev: true
+
+  rg.cnpmjs.org/color-name/1.1.3:
+    resolution: {integrity: sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/color-name/download/color-name-1.1.3.tgz}
+    name: color-name
+    version: 1.1.3
+    dev: true
+
+  rg.cnpmjs.org/compute-scroll-into-view/1.0.17:
+    resolution: {integrity: sha1-aojxis2dQunPS6pr7H4FImB6t6s=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/compute-scroll-into-view/download/compute-scroll-into-view-1.0.17.tgz}
+    name: compute-scroll-into-view
+    version: 1.0.17
+    dev: true
+
+  rg.cnpmjs.org/content-disposition/0.5.4:
+    resolution: {integrity: sha512-FveZTNuGw04cxlAiWbzi6zTAL/lhehaWbTtgluJh4/E95DqMwTmha3KZN1aAWA8cFIhHzMZUvLevkw5Rqk+tSQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/content-disposition/download/content-disposition-0.5.4.tgz}
+    name: content-disposition
+    version: 0.5.4
+    engines: {node: '>= 0.6'}
+    dependencies:
+      safe-buffer: rg.cnpmjs.org/safe-buffer/5.2.1
+    dev: true
+
+  rg.cnpmjs.org/content-type/1.0.4:
+    resolution: {integrity: sha1-4TjMdeBAxyexlm/l5fjJruJW/js=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/content-type/download/content-type-1.0.4.tgz}
+    name: content-type
+    version: 1.0.4
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  rg.cnpmjs.org/convert-source-map/1.8.0:
+    resolution: {integrity: sha1-8zc8MtIbTXgN2ABFFGhPt5HKQ2k=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/convert-source-map/download/convert-source-map-1.8.0.tgz}
+    name: convert-source-map
+    version: 1.8.0
+    dependencies:
+      safe-buffer: rg.cnpmjs.org/safe-buffer/5.1.2
+    dev: true
+
+  rg.cnpmjs.org/cookie-signature/1.0.6:
+    resolution: {integrity: sha1-4wOogrNCzD7oylE6eZmXNNqzriw=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/cookie-signature/download/cookie-signature-1.0.6.tgz}
+    name: cookie-signature
+    version: 1.0.6
+    dev: true
+
+  rg.cnpmjs.org/cookie/0.4.1:
+    resolution: {integrity: sha1-r9cT/ibr0hupXOth+agRblClN9E=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/cookie/download/cookie-0.4.1.tgz}
+    name: cookie
+    version: 0.4.1
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  rg.cnpmjs.org/copy-anything/2.0.3:
+    resolution: {integrity: sha1-hCQHugJGaw34RIGbvjuuu+XUXYc=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/copy-anything/download/copy-anything-2.0.3.tgz}
+    name: copy-anything
+    version: 2.0.3
+    dependencies:
+      is-what: rg.cnpmjs.org/is-what/3.14.1
+    dev: false
+
+  rg.cnpmjs.org/copy-to-clipboard/3.3.1:
+    resolution: {integrity: sha1-EVqhqZmP+rYZb5MHatbaO5E2Yq4=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/copy-to-clipboard/download/copy-to-clipboard-3.3.1.tgz}
+    name: copy-to-clipboard
+    version: 3.3.1
+    dependencies:
+      toggle-selection: rg.cnpmjs.org/toggle-selection/1.0.6
+    dev: true
+
+  rg.cnpmjs.org/date-fns/2.27.0:
+    resolution: {integrity: sha512-sj+J0Mo2p2X1e306MHq282WS4/A8Pz/95GIFcsPNMPMZVI3EUrAdSv90al1k+p74WGLCruMXk23bfEDZa71X9Q==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/date-fns/download/date-fns-2.27.0.tgz}
+    name: date-fns
+    version: 2.27.0
+    engines: {node: '>=0.11'}
+    dev: true
+
+  rg.cnpmjs.org/dayjs/1.10.7:
+    resolution: {integrity: sha1-LPX5Gt0oEWdIRAhmoKHSbzps5Gg=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/dayjs/download/dayjs-1.10.7.tgz}
+    name: dayjs
+    version: 1.10.7
+    dev: true
+
+  rg.cnpmjs.org/debug/2.6.9:
+    resolution: {integrity: sha1-XRKFFd8TT/Mn6QpMk/Tgd6U2NB8=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/debug/download/debug-2.6.9.tgz}
+    name: debug
+    version: 2.6.9
+    dependencies:
+      ms: rg.cnpmjs.org/ms/2.0.0
+    dev: true
+
+  rg.cnpmjs.org/debug/3.2.7:
+    resolution: {integrity: sha1-clgLfpFF+zm2Z2+cXl+xALk0F5o=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/debug/download/debug-3.2.7.tgz}
+    name: debug
+    version: 3.2.7
+    dependencies:
+      ms: rg.cnpmjs.org/ms/2.1.3
+    dev: false
+    optional: true
+
+  rg.cnpmjs.org/debug/4.3.3:
+    resolution: {integrity: sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/debug/download/debug-4.3.3.tgz}
+    name: debug
+    version: 4.3.3
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: rg.cnpmjs.org/ms/2.1.2
+    dev: true
+
+  rg.cnpmjs.org/depd/1.1.2:
+    resolution: {integrity: sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/depd/download/depd-1.1.2.tgz}
+    name: depd
+    version: 1.1.2
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  rg.cnpmjs.org/destroy/1.0.4:
+    resolution: {integrity: sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/destroy/download/destroy-1.0.4.tgz}
+    name: destroy
+    version: 1.0.4
+    dev: true
+
+  rg.cnpmjs.org/dom-align/1.12.2:
+    resolution: {integrity: sha1-D4Fk69DJwhsMeQMQSTzYVYkqzUs=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/dom-align/download/dom-align-1.12.2.tgz}
+    name: dom-align
+    version: 1.12.2
+    dev: true
+
+  rg.cnpmjs.org/ee-first/1.1.1:
+    resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/ee-first/download/ee-first-1.1.1.tgz}
+    name: ee-first
+    version: 1.1.1
+    dev: true
+
+  rg.cnpmjs.org/electron-to-chromium/1.4.27:
+    resolution: {integrity: sha512-uZ95szi3zUbzRDx1zx/xnsCG+2xgZyy57pDOeaeO4r8zx5Dqe8Jv1ti8cunvBwJHVI5LzPuw8umKwZb3WKYxSQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/electron-to-chromium/download/electron-to-chromium-1.4.27.tgz}
+    name: electron-to-chromium
+    version: 1.4.27
+    dev: true
+
+  rg.cnpmjs.org/encodeurl/1.0.2:
+    resolution: {integrity: sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/encodeurl/download/encodeurl-1.0.2.tgz}
+    name: encodeurl
+    version: 1.0.2
+    engines: {node: '>= 0.8'}
+    dev: true
+
+  rg.cnpmjs.org/errno/0.1.8:
+    resolution: {integrity: sha1-i7Ppx9Rjvkl2/4iPdrSAnrwugR8=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/errno/download/errno-0.1.8.tgz}
+    name: errno
+    version: 0.1.8
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      prr: rg.cnpmjs.org/prr/1.0.1
+    dev: false
+    optional: true
+
+  rg.cnpmjs.org/escalade/3.1.1:
+    resolution: {integrity: sha1-2M/ccACWXFoBdLSoLqpcBVJ0LkA=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/escalade/download/escalade-3.1.1.tgz}
+    name: escalade
+    version: 3.1.1
+    engines: {node: '>=6'}
+    dev: true
+
+  rg.cnpmjs.org/escape-html/1.0.3:
+    resolution: {integrity: sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/escape-html/download/escape-html-1.0.3.tgz}
+    name: escape-html
+    version: 1.0.3
+    dev: true
+
+  rg.cnpmjs.org/escape-string-regexp/1.0.5:
+    resolution: {integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/escape-string-regexp/download/escape-string-regexp-1.0.5.tgz}
+    name: escape-string-regexp
+    version: 1.0.5
+    engines: {node: '>=0.8.0'}
+    dev: true
+
+  rg.cnpmjs.org/etag/1.8.1:
+    resolution: {integrity: sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/etag/download/etag-1.8.1.tgz}
+    name: etag
+    version: 1.8.1
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  rg.cnpmjs.org/exec-sh/0.2.2:
+    resolution: {integrity: sha1-Kl5//L19C6J1W97LFuWkJ9+97DY=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/exec-sh/download/exec-sh-0.2.2.tgz}
+    name: exec-sh
+    version: 0.2.2
+    dependencies:
+      merge: rg.cnpmjs.org/merge/1.2.1
+    dev: true
+
+  rg.cnpmjs.org/express/4.17.2:
+    resolution: {integrity: sha512-oxlxJxcQlYwqPWKVJJtvQiwHgosH/LrLSPA+H4UxpyvSS6jC5aH+5MoHFM+KABgTOt0APue4w66Ha8jCUo9QGg==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/express/download/express-4.17.2.tgz}
+    name: express
+    version: 4.17.2
+    engines: {node: '>= 0.10.0'}
+    dependencies:
+      accepts: rg.cnpmjs.org/accepts/1.3.7
+      array-flatten: rg.cnpmjs.org/array-flatten/1.1.1
+      body-parser: rg.cnpmjs.org/body-parser/1.19.1
+      content-disposition: rg.cnpmjs.org/content-disposition/0.5.4
+      content-type: rg.cnpmjs.org/content-type/1.0.4
+      cookie: rg.cnpmjs.org/cookie/0.4.1
+      cookie-signature: rg.cnpmjs.org/cookie-signature/1.0.6
+      debug: rg.cnpmjs.org/debug/2.6.9
+      depd: rg.cnpmjs.org/depd/1.1.2
+      encodeurl: rg.cnpmjs.org/encodeurl/1.0.2
+      escape-html: rg.cnpmjs.org/escape-html/1.0.3
+      etag: rg.cnpmjs.org/etag/1.8.1
+      finalhandler: rg.cnpmjs.org/finalhandler/1.1.2
+      fresh: rg.cnpmjs.org/fresh/0.5.2
+      merge-descriptors: rg.cnpmjs.org/merge-descriptors/1.0.1
+      methods: rg.cnpmjs.org/methods/1.1.2
+      on-finished: rg.cnpmjs.org/on-finished/2.3.0
+      parseurl: rg.cnpmjs.org/parseurl/1.3.3
+      path-to-regexp: rg.cnpmjs.org/path-to-regexp/0.1.7
+      proxy-addr: rg.cnpmjs.org/proxy-addr/2.0.7
+      qs: rg.cnpmjs.org/qs/6.9.6
+      range-parser: rg.cnpmjs.org/range-parser/1.2.1
+      safe-buffer: rg.cnpmjs.org/safe-buffer/5.2.1
+      send: rg.cnpmjs.org/send/0.17.2
+      serve-static: rg.cnpmjs.org/serve-static/1.14.2
+      setprototypeof: rg.cnpmjs.org/setprototypeof/1.2.0
+      statuses: rg.cnpmjs.org/statuses/1.5.0
+      type-is: rg.cnpmjs.org/type-is/1.6.18
+      utils-merge: rg.cnpmjs.org/utils-merge/1.0.1
+      vary: rg.cnpmjs.org/vary/1.1.2
+    dev: true
+
+  rg.cnpmjs.org/fill-range/7.0.1:
+    resolution: {integrity: sha1-GRmmp8df44ssfHflGYU12prN2kA=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/fill-range/download/fill-range-7.0.1.tgz}
+    name: fill-range
+    version: 7.0.1
+    engines: {node: '>=8'}
+    dependencies:
+      to-regex-range: rg.cnpmjs.org/to-regex-range/5.0.1
+    dev: true
+
+  rg.cnpmjs.org/finalhandler/1.1.2:
+    resolution: {integrity: sha1-t+fQAP/RGTjQ/bBTUG9uur6fWH0=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/finalhandler/download/finalhandler-1.1.2.tgz}
+    name: finalhandler
+    version: 1.1.2
+    engines: {node: '>= 0.8'}
+    dependencies:
+      debug: rg.cnpmjs.org/debug/2.6.9
+      encodeurl: rg.cnpmjs.org/encodeurl/1.0.2
+      escape-html: rg.cnpmjs.org/escape-html/1.0.3
+      on-finished: rg.cnpmjs.org/on-finished/2.3.0
+      parseurl: rg.cnpmjs.org/parseurl/1.3.3
+      statuses: rg.cnpmjs.org/statuses/1.5.0
+      unpipe: rg.cnpmjs.org/unpipe/1.0.0
+    dev: true
+
+  rg.cnpmjs.org/forwarded/0.2.0:
+    resolution: {integrity: sha1-ImmTZCiq1MFcfr6XeahL8LKoGBE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/forwarded/download/forwarded-0.2.0.tgz}
+    name: forwarded
+    version: 0.2.0
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  rg.cnpmjs.org/fresh/0.5.2:
+    resolution: {integrity: sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/fresh/download/fresh-0.5.2.tgz}
+    name: fresh
+    version: 0.5.2
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  rg.cnpmjs.org/fsevents/2.3.2:
+    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/fsevents/download/fsevents-2.3.2.tgz}
+    name: fsevents
+    version: 2.3.2
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  rg.cnpmjs.org/gensync/1.0.0-beta.2:
+    resolution: {integrity: sha1-MqbudsPX9S1GsrGuXZP+qFgKJeA=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/gensync/download/gensync-1.0.0-beta.2.tgz}
+    name: gensync
+    version: 1.0.0-beta.2
+    engines: {node: '>=6.9.0'}
+    dev: true
+
+  rg.cnpmjs.org/glob-parent/5.1.2:
+    resolution: {integrity: sha1-hpgyxYA0/mikCTwX3BXoNA2EAcQ=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/glob-parent/download/glob-parent-5.1.2.tgz}
+    name: glob-parent
+    version: 5.1.2
+    engines: {node: '>= 6'}
+    dependencies:
+      is-glob: rg.cnpmjs.org/is-glob/4.0.3
+    dev: true
+
+  rg.cnpmjs.org/globals/11.12.0:
+    resolution: {integrity: sha1-q4eVM4hooLq9hSV1gBjCp+uVxC4=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/globals/download/globals-11.12.0.tgz}
+    name: globals
+    version: 11.12.0
+    engines: {node: '>=4'}
+    dev: true
+
+  rg.cnpmjs.org/graceful-fs/4.2.8:
+    resolution: {integrity: sha1-5BK40z9eAGWTy9PO5t+fLOu+gCo=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/graceful-fs/download/graceful-fs-4.2.8.tgz}
+    name: graceful-fs
+    version: 4.2.8
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  rg.cnpmjs.org/has-flag/3.0.0:
+    resolution: {integrity: sha1-tdRU3CGZriJWmfNGfloH87lVuv0=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/has-flag/download/has-flag-3.0.0.tgz}
+    name: has-flag
+    version: 3.0.0
+    engines: {node: '>=4'}
+    dev: true
+
+  rg.cnpmjs.org/html-tags/2.0.0:
+    resolution: {integrity: sha1-ELMKOGCF9Dzt41PMj6fLDe7qZos=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/html-tags/download/html-tags-2.0.0.tgz}
+    name: html-tags
+    version: 2.0.0
+    engines: {node: '>=4'}
+    dev: true
+
+  rg.cnpmjs.org/http-errors/1.8.1:
+    resolution: {integrity: sha512-Kpk9Sm7NmI+RHhnj6OIWDI1d6fIoFAtFt9RLaTMRlg/8w49juAStsrBgp0Dp4OdxdVbRIeKhtCUvoi/RuAhO4g==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/http-errors/download/http-errors-1.8.1.tgz}
+    name: http-errors
+    version: 1.8.1
+    engines: {node: '>= 0.6'}
+    dependencies:
+      depd: rg.cnpmjs.org/depd/1.1.2
+      inherits: rg.cnpmjs.org/inherits/2.0.4
+      setprototypeof: rg.cnpmjs.org/setprototypeof/1.2.0
+      statuses: rg.cnpmjs.org/statuses/1.5.0
+      toidentifier: rg.cnpmjs.org/toidentifier/1.0.1
+    dev: true
+
+  rg.cnpmjs.org/iconv-lite/0.4.24:
+    resolution: {integrity: sha1-ICK0sl+93CHS9SSXSkdKr+czkIs=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/iconv-lite/download/iconv-lite-0.4.24.tgz}
+    name: iconv-lite
+    version: 0.4.24
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      safer-buffer: rg.cnpmjs.org/safer-buffer/2.1.2
+
+  rg.cnpmjs.org/image-size/0.5.5:
+    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/image-size/download/image-size-0.5.5.tgz}
+    name: image-size
+    version: 0.5.5
+    engines: {node: '>=0.10.0'}
+    hasBin: true
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  rg.cnpmjs.org/inherits/2.0.3:
+    resolution: {integrity: sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/inherits/download/inherits-2.0.3.tgz}
+    name: inherits
+    version: 2.0.3
+    dev: true
+
+  rg.cnpmjs.org/inherits/2.0.4:
+    resolution: {integrity: sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/inherits/download/inherits-2.0.4.tgz}
+    name: inherits
+    version: 2.0.4
+    dev: true
+
+  rg.cnpmjs.org/ipaddr.js/1.9.1:
+    resolution: {integrity: sha1-v/OFQ+64mEglB5/zoqjmy9RngbM=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/ipaddr.js/download/ipaddr.js-1.9.1.tgz}
+    name: ipaddr.js
+    version: 1.9.1
+    engines: {node: '>= 0.10'}
+    dev: true
+
+  rg.cnpmjs.org/is-binary-path/2.1.0:
+    resolution: {integrity: sha1-6h9/O4DwZCNug0cPhsCcJU+0Wwk=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/is-binary-path/download/is-binary-path-2.1.0.tgz}
+    name: is-binary-path
+    version: 2.1.0
+    engines: {node: '>=8'}
+    dependencies:
+      binary-extensions: rg.cnpmjs.org/binary-extensions/2.2.0
+    dev: true
+
+  rg.cnpmjs.org/is-docker/2.2.1:
+    resolution: {integrity: sha1-M+6r4jz+hvFL3kQIoCwM+4U6zao=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/is-docker/download/is-docker-2.2.1.tgz}
+    name: is-docker
+    version: 2.2.1
+    engines: {node: '>=8'}
+    hasBin: true
+    dev: true
+
+  rg.cnpmjs.org/is-extglob/2.1.1:
+    resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/is-extglob/download/is-extglob-2.1.1.tgz}
+    name: is-extglob
+    version: 2.1.1
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  rg.cnpmjs.org/is-glob/4.0.3:
+    resolution: {integrity: sha1-ZPYeQsu7LuwgcanawLKLoeZdUIQ=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/is-glob/download/is-glob-4.0.3.tgz}
+    name: is-glob
+    version: 4.0.3
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      is-extglob: rg.cnpmjs.org/is-extglob/2.1.1
+    dev: true
+
+  rg.cnpmjs.org/is-number/7.0.0:
+    resolution: {integrity: sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/is-number/download/is-number-7.0.0.tgz}
+    name: is-number
+    version: 7.0.0
+    engines: {node: '>=0.12.0'}
+    dev: true
+
+  rg.cnpmjs.org/is-what/3.14.1:
+    resolution: {integrity: sha1-4SIvRt3ahd6tD9HJ3xMXYOd3VcE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/is-what/download/is-what-3.14.1.tgz}
+    name: is-what
+    version: 3.14.1
+    dev: false
+
+  rg.cnpmjs.org/is-wsl/2.2.0:
+    resolution: {integrity: sha1-dKTHbnfKn9P5MvKQwX6jJs0VcnE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/is-wsl/download/is-wsl-2.2.0.tgz}
+    name: is-wsl
+    version: 2.2.0
+    engines: {node: '>=8'}
+    dependencies:
+      is-docker: rg.cnpmjs.org/is-docker/2.2.1
+    dev: true
+
+  rg.cnpmjs.org/js-tokens/4.0.0:
+    resolution: {integrity: sha1-GSA/tZmR35jjoocFDUZHzerzJJk=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/js-tokens/download/js-tokens-4.0.0.tgz}
+    name: js-tokens
+    version: 4.0.0
+    dev: true
+
+  rg.cnpmjs.org/jsesc/2.5.2:
+    resolution: {integrity: sha1-gFZNLkg9rPbo7yCWUKZ98/DCg6Q=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/jsesc/download/jsesc-2.5.2.tgz}
+    name: jsesc
+    version: 2.5.2
+    engines: {node: '>=4'}
+    hasBin: true
+    dev: true
+
+  rg.cnpmjs.org/json2mq/0.2.0:
+    resolution: {integrity: sha1-tje9O6nqvhIsg+lyBIOusQ0skEo=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/json2mq/download/json2mq-0.2.0.tgz}
+    name: json2mq
+    version: 0.2.0
+    dependencies:
+      string-convert: rg.cnpmjs.org/string-convert/0.2.1
+    dev: true
+
+  rg.cnpmjs.org/json5/2.2.0:
+    resolution: {integrity: sha1-Lf7+cgxrpSXZ69kJlQ8FFTFsiaM=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/json5/download/json5-2.2.0.tgz}
+    name: json5
+    version: 2.2.0
+    engines: {node: '>=6'}
+    hasBin: true
+    dependencies:
+      minimist: rg.cnpmjs.org/minimist/1.2.5
+    dev: true
+
+  rg.cnpmjs.org/less/4.1.2:
+    resolution: {integrity: sha1-YJnuWEmZdQwmJLZfgBRfhnTktLA=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/less/download/less-4.1.2.tgz}
+    name: less
+    version: 4.1.2
+    engines: {node: '>=6'}
+    hasBin: true
+    dependencies:
+      copy-anything: rg.cnpmjs.org/copy-anything/2.0.3
+      parse-node-version: rg.cnpmjs.org/parse-node-version/1.0.1
+      tslib: rg.cnpmjs.org/tslib/2.3.1
+    optionalDependencies:
+      errno: rg.cnpmjs.org/errno/0.1.8
+      graceful-fs: rg.cnpmjs.org/graceful-fs/4.2.8
+      image-size: rg.cnpmjs.org/image-size/0.5.5
+      make-dir: rg.cnpmjs.org/make-dir/2.1.0
+      mime: rg.cnpmjs.org/mime/1.6.0
+      needle: rg.cnpmjs.org/needle/2.9.1
+      source-map: rg.cnpmjs.org/source-map/0.6.1
+    dev: false
+
+  rg.cnpmjs.org/lodash.kebabcase/4.1.1:
+    resolution: {integrity: sha1-hImxyw0p/4gZXM7KRI/21swpXDY=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/lodash.kebabcase/download/lodash.kebabcase-4.1.1.tgz}
+    name: lodash.kebabcase
+    version: 4.1.1
+    dev: true
+
+  rg.cnpmjs.org/lodash/4.17.21:
+    resolution: {integrity: sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/lodash/download/lodash-4.17.21.tgz}
+    name: lodash
+    version: 4.17.21
+    dev: true
+
+  rg.cnpmjs.org/loose-envify/1.4.0:
+    resolution: {integrity: sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/loose-envify/download/loose-envify-1.4.0.tgz}
+    name: loose-envify
+    version: 1.4.0
+    hasBin: true
+    dependencies:
+      js-tokens: rg.cnpmjs.org/js-tokens/4.0.0
+    dev: true
+
+  rg.cnpmjs.org/make-dir/2.1.0:
+    resolution: {integrity: sha1-XwMQ4YuL6JjMBwCSlaMK5B6R5vU=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/make-dir/download/make-dir-2.1.0.tgz}
+    name: make-dir
+    version: 2.1.0
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      pify: rg.cnpmjs.org/pify/4.0.1
+      semver: rg.cnpmjs.org/semver/5.7.1
+    dev: false
+    optional: true
+
+  rg.cnpmjs.org/media-typer/0.3.0:
+    resolution: {integrity: sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/media-typer/download/media-typer-0.3.0.tgz}
+    name: media-typer
+    version: 0.3.0
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  rg.cnpmjs.org/memoize-one/6.0.0:
+    resolution: {integrity: sha1-slkbhx7YKUiu5HJ9xqvO7qyMEEU=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/memoize-one/download/memoize-one-6.0.0.tgz}
+    name: memoize-one
+    version: 6.0.0
+    dev: true
+
+  rg.cnpmjs.org/merge-descriptors/1.0.1:
+    resolution: {integrity: sha1-sAqqVW3YtEVoFQ7J0blT8/kMu2E=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/merge-descriptors/download/merge-descriptors-1.0.1.tgz}
+    name: merge-descriptors
+    version: 1.0.1
+    dev: true
+
+  rg.cnpmjs.org/merge/1.2.1:
+    resolution: {integrity: sha1-OL6/gMMiCopIe2/Ps5QbsRcgwUU=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/merge/download/merge-1.2.1.tgz}
+    name: merge
+    version: 1.2.1
+    dev: true
+
+  rg.cnpmjs.org/methods/1.1.2:
+    resolution: {integrity: sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/methods/download/methods-1.1.2.tgz}
+    name: methods
+    version: 1.1.2
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  rg.cnpmjs.org/mime-db/1.51.0:
+    resolution: {integrity: sha512-5y8A56jg7XVQx2mbv1lu49NR4dokRnhZYTtL+KGfaa27uq4pSTXkwQkFJl4pkRMyNFz/EtYDSkiiEHx3F7UN6g==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/mime-db/download/mime-db-1.51.0.tgz}
+    name: mime-db
+    version: 1.51.0
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  rg.cnpmjs.org/mime-types/2.1.34:
+    resolution: {integrity: sha512-6cP692WwGIs9XXdOO4++N+7qjqv0rqxxVvJ3VHPh/Sc9mVZcQP+ZGhkKiTvWMQRr2tbHkJP/Yn7Y0npb3ZBs4A==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/mime-types/download/mime-types-2.1.34.tgz}
+    name: mime-types
+    version: 2.1.34
+    engines: {node: '>= 0.6'}
+    dependencies:
+      mime-db: rg.cnpmjs.org/mime-db/1.51.0
+    dev: true
+
+  rg.cnpmjs.org/mime/1.6.0:
+    resolution: {integrity: sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/mime/download/mime-1.6.0.tgz}
+    name: mime
+    version: 1.6.0
+    engines: {node: '>=4'}
+    hasBin: true
+
+  rg.cnpmjs.org/minimist/1.2.5:
+    resolution: {integrity: sha1-Z9ZgFLZqaoqqDAg8X9WN9OTpdgI=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/minimist/download/minimist-1.2.5.tgz}
+    name: minimist
+    version: 1.2.5
+    dev: true
+
+  rg.cnpmjs.org/moment/2.29.1:
+    resolution: {integrity: sha1-sr52n6MZQL6e7qZGnAdeNQBvo9M=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/moment/download/moment-2.29.1.tgz}
+    name: moment
+    version: 2.29.1
+    dev: true
+
+  rg.cnpmjs.org/ms/2.0.0:
+    resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/ms/download/ms-2.0.0.tgz}
+    name: ms
+    version: 2.0.0
+    dev: true
+
+  rg.cnpmjs.org/ms/2.1.2:
+    resolution: {integrity: sha1-0J0fNXtEP0kzgqjrPM0YOHKuYAk=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/ms/download/ms-2.1.2.tgz}
+    name: ms
+    version: 2.1.2
+    dev: true
+
+  rg.cnpmjs.org/ms/2.1.3:
+    resolution: {integrity: sha1-V0yBOM4dK1hh8LRFedut1gxmFbI=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/ms/download/ms-2.1.3.tgz}
+    name: ms
+    version: 2.1.3
+
+  rg.cnpmjs.org/needle/2.9.1:
+    resolution: {integrity: sha1-ItHf++NJDCuD4wH3cJtnNs2PJoQ=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/needle/download/needle-2.9.1.tgz}
+    name: needle
+    version: 2.9.1
+    engines: {node: '>= 4.4.x'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      debug: rg.cnpmjs.org/debug/3.2.7
+      iconv-lite: rg.cnpmjs.org/iconv-lite/0.4.24
+      sax: rg.cnpmjs.org/sax/1.2.4
+    dev: false
+    optional: true
+
+  rg.cnpmjs.org/negotiator/0.6.2:
+    resolution: {integrity: sha1-/qz3zPUlp3rpY0Q2pkiD/+yjRvs=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/negotiator/download/negotiator-0.6.2.tgz}
+    name: negotiator
+    version: 0.6.2
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  rg.cnpmjs.org/node-releases/2.0.1:
+    resolution: {integrity: sha1-PR05XyBPHy8ppUNYuftnh2WtL8U=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/node-releases/download/node-releases-2.0.1.tgz}
+    name: node-releases
+    version: 2.0.1
+    dev: true
+
+  rg.cnpmjs.org/nodejs-websocket/1.7.2:
+    resolution: {integrity: sha1-lKvR4kj1fU0cZj3sODEBXG2tmKY=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/nodejs-websocket/download/nodejs-websocket-1.7.2.tgz}
+    name: nodejs-websocket
+    version: 1.7.2
+    engines: {node: '>=4'}
+    dev: true
+
+  rg.cnpmjs.org/normalize-path/3.0.0:
+    resolution: {integrity: sha1-Dc1p/yOhybEf0JeDFmRKA4ghamU=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/normalize-path/download/normalize-path-3.0.0.tgz}
+    name: normalize-path
+    version: 3.0.0
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  rg.cnpmjs.org/on-finished/2.3.0:
+    resolution: {integrity: sha1-IPEzZIGwg811M3mSoWlxqi2QaUc=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/on-finished/download/on-finished-2.3.0.tgz}
+    name: on-finished
+    version: 2.3.0
+    engines: {node: '>= 0.8'}
+    dependencies:
+      ee-first: rg.cnpmjs.org/ee-first/1.1.1
+    dev: true
+
+  rg.cnpmjs.org/open/7.4.2:
+    resolution: {integrity: sha1-uBR+Jtzz5CYxbHMAif1x7dKcIyE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/open/download/open-7.4.2.tgz}
+    name: open
+    version: 7.4.2
+    engines: {node: '>=8'}
+    dependencies:
+      is-docker: rg.cnpmjs.org/is-docker/2.2.1
+      is-wsl: rg.cnpmjs.org/is-wsl/2.2.0
+    dev: true
+
+  rg.cnpmjs.org/parse-node-version/1.0.1:
+    resolution: {integrity: sha1-4rXb7eAOf6m8NjYH9TMn6LBzGJs=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/parse-node-version/download/parse-node-version-1.0.1.tgz}
+    name: parse-node-version
+    version: 1.0.1
+    engines: {node: '>= 0.10'}
+    dev: false
+
+  rg.cnpmjs.org/parseurl/1.3.3:
+    resolution: {integrity: sha1-naGee+6NEt/wUT7Vt2lXeTvC6NQ=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/parseurl/download/parseurl-1.3.3.tgz}
+    name: parseurl
+    version: 1.3.3
+    engines: {node: '>= 0.8'}
+    dev: true
+
+  rg.cnpmjs.org/path-to-regexp/0.1.7:
+    resolution: {integrity: sha1-32BBeABfUi8V60SQ5yR6G/qmf4w=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/path-to-regexp/download/path-to-regexp-0.1.7.tgz}
+    name: path-to-regexp
+    version: 0.1.7
+    dev: true
+
+  rg.cnpmjs.org/path/0.12.7:
+    resolution: {integrity: sha1-1NwqUGxM4hl+tIHr/NWzbAFAsQ8=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/path/download/path-0.12.7.tgz}
+    name: path
+    version: 0.12.7
+    dependencies:
+      process: rg.cnpmjs.org/process/0.11.10
+      util: rg.cnpmjs.org/util/0.10.4
+    dev: true
+
+  rg.cnpmjs.org/picocolors/1.0.0:
+    resolution: {integrity: sha1-y1vcdP8/UYkiNur3nWi8RFZKuBw=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/picocolors/download/picocolors-1.0.0.tgz}
+    name: picocolors
+    version: 1.0.0
+    dev: true
+
+  rg.cnpmjs.org/picomatch/2.3.0:
+    resolution: {integrity: sha1-8fBh3o9qS/AiiS4tEoI0+5gwKXI=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/picomatch/download/picomatch-2.3.0.tgz}
+    name: picomatch
+    version: 2.3.0
+    engines: {node: '>=8.6'}
+    dev: true
+
+  rg.cnpmjs.org/pify/4.0.1:
+    resolution: {integrity: sha1-SyzSXFDVmHNcUCkiJP2MbfQeMjE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/pify/download/pify-4.0.1.tgz}
+    name: pify
+    version: 4.0.1
+    engines: {node: '>=6'}
+    dev: false
+    optional: true
+
+  rg.cnpmjs.org/process/0.11.10:
+    resolution: {integrity: sha1-czIwDoQBYb2j5podHZGn1LwW8YI=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/process/download/process-0.11.10.tgz}
+    name: process
+    version: 0.11.10
+    engines: {node: '>= 0.6.0'}
+    dev: true
+
+  rg.cnpmjs.org/proxy-addr/2.0.7:
+    resolution: {integrity: sha1-8Z/mnOqzEe65S0LnDowgcPm6ECU=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/proxy-addr/download/proxy-addr-2.0.7.tgz}
+    name: proxy-addr
+    version: 2.0.7
+    engines: {node: '>= 0.10'}
+    dependencies:
+      forwarded: rg.cnpmjs.org/forwarded/0.2.0
+      ipaddr.js: rg.cnpmjs.org/ipaddr.js/1.9.1
+    dev: true
+
+  rg.cnpmjs.org/prr/1.0.1:
+    resolution: {integrity: sha1-0/wRS6BplaRexok/SEzrHXj19HY=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/prr/download/prr-1.0.1.tgz}
+    name: prr
+    version: 1.0.1
+    dev: false
+    optional: true
+
+  rg.cnpmjs.org/qs/6.9.6:
+    resolution: {integrity: sha1-Ju08gkOkMbKSSsqEzJBHHzXVoO4=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/qs/download/qs-6.9.6.tgz}
+    name: qs
+    version: 6.9.6
+    engines: {node: '>=0.6'}
+    dev: true
+
+  rg.cnpmjs.org/range-parser/1.2.1:
+    resolution: {integrity: sha1-PPNwI9GZ4cJNGlW4SADC8+ZGgDE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/range-parser/download/range-parser-1.2.1.tgz}
+    name: range-parser
+    version: 1.2.1
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  rg.cnpmjs.org/raw-body/2.4.2:
+    resolution: {integrity: sha512-RPMAFUJP19WIet/99ngh6Iv8fzAbqum4Li7AD6DtGaW2RpMB/11xDoalPiJMTbu6I3hkbMVkATvZrqb9EEqeeQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/raw-body/download/raw-body-2.4.2.tgz}
+    name: raw-body
+    version: 2.4.2
+    engines: {node: '>= 0.8'}
+    dependencies:
+      bytes: rg.cnpmjs.org/bytes/3.1.1
+      http-errors: rg.cnpmjs.org/http-errors/1.8.1
+      iconv-lite: rg.cnpmjs.org/iconv-lite/0.4.24
+      unpipe: rg.cnpmjs.org/unpipe/1.0.0
+    dev: true
+
+  rg.cnpmjs.org/rc-align/4.0.11:
+    resolution: {integrity: sha1-gZjGLbJmvBuO8F5WwTJ1v3Jiil4=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-align/download/rc-align-4.0.11.tgz}
+    name: rc-align
+    version: 4.0.11
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      dom-align: rg.cnpmjs.org/dom-align/1.12.2
+      lodash: rg.cnpmjs.org/lodash/4.17.21
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+      resize-observer-polyfill: rg.cnpmjs.org/resize-observer-polyfill/1.5.1
+    dev: true
+
+  rg.cnpmjs.org/rc-cascader/2.3.3:
+    resolution: {integrity: sha512-ckD8rKJjS8mdXxylWh1PtIHSFhbj/yf1NimyooqeJlvtLhzRZXIHCj4IuOjwYZ6J1DqoOCCdJfVtc7UeZia38w==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-cascader/download/rc-cascader-2.3.3.tgz}
+    name: rc-cascader
+    version: 2.3.3
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      array-tree-filter: rg.cnpmjs.org/array-tree-filter/2.1.0
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-tree-select: rg.cnpmjs.org/rc-tree-select/4.8.0
+      rc-trigger: rg.cnpmjs.org/rc-trigger/5.2.10
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+      warning: rg.cnpmjs.org/warning/4.0.3
+    dev: true
+
+  rg.cnpmjs.org/rc-checkbox/2.3.2:
+    resolution: {integrity: sha1-+Rs2eMftsrqoEhyUg8Zk+m8K78E=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-checkbox/download/rc-checkbox-2.3.2.tgz}
+    name: rc-checkbox
+    version: 2.3.2
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+    dev: true
+
+  rg.cnpmjs.org/rc-collapse/3.1.2:
+    resolution: {integrity: sha1-dgKKgRuEXQPZRgzMQJx+qK0J2xQ=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-collapse/download/rc-collapse-3.1.2.tgz}
+    name: rc-collapse
+    version: 3.1.2
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-motion: rg.cnpmjs.org/rc-motion/2.4.4
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+      shallowequal: rg.cnpmjs.org/shallowequal/1.1.0
+    dev: true
+
+  rg.cnpmjs.org/rc-dialog/8.6.0:
+    resolution: {integrity: sha1-OyKNrAhd5e7YxiN/MRYhBGh0Quc=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-dialog/download/rc-dialog-8.6.0.tgz}
+    name: rc-dialog
+    version: 8.6.0
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-motion: rg.cnpmjs.org/rc-motion/2.4.4
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-drawer/4.4.3:
+    resolution: {integrity: sha512-FYztwRs3uXnFOIf1hLvFxIQP9MiZJA+0w+Os8dfDh/90X7z/HqP/Yg+noLCIeHEbKln1Tqelv8ymCAN24zPcfQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-drawer/download/rc-drawer-4.4.3.tgz}
+    name: rc-drawer
+    version: 4.4.3
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-dropdown/3.2.0:
+    resolution: {integrity: sha1-2mwq2kA4QrruOp6Qmgsakbo+EJA=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-dropdown/download/rc-dropdown-3.2.0.tgz}
+    name: rc-dropdown
+    version: 3.2.0
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-trigger: rg.cnpmjs.org/rc-trigger/5.2.10
+    dev: true
+
+  rg.cnpmjs.org/rc-field-form/1.21.2:
+    resolution: {integrity: sha1-hb2h7gBq6fHRRuEAAzfGm0u20QE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-field-form/download/rc-field-form-1.21.2.tgz}
+    name: rc-field-form
+    version: 1.21.2
+    engines: {node: '>=8.x'}
+    peerDependencies:
+      react: '>= 16.9.0'
+      react-dom: '>= 16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      async-validator: rg.cnpmjs.org/async-validator/4.0.7
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-image/5.2.5:
+    resolution: {integrity: sha1-ROb/yEJiaCeWDnq3LhwNbzqM5EA=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-image/download/rc-image-5.2.5.tgz}
+    name: rc-image
+    version: 5.2.5
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-dialog: rg.cnpmjs.org/rc-dialog/8.6.0
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-input-number/7.3.4:
+    resolution: {integrity: sha512-W9uqSzuvJUnz8H8vsVY4kx+yK51SsAxNTwr8SNH4G3XqQNocLVmKIibKFRjocnYX1RDHMND9FFbgj2h7E7nvGA==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-input-number/download/rc-input-number-7.3.4.tgz}
+    name: rc-input-number
+    version: 7.3.4
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-mentions/1.6.1:
+    resolution: {integrity: sha1-RgNQJ9ZKoz74QLoPvUEYceNGF64=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-mentions/download/rc-mentions-1.6.1.tgz}
+    name: rc-mentions
+    version: 1.6.1
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-menu: rg.cnpmjs.org/rc-menu/9.0.14
+      rc-textarea: rg.cnpmjs.org/rc-textarea/0.3.6
+      rc-trigger: rg.cnpmjs.org/rc-trigger/5.2.10
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-menu/9.0.14:
+    resolution: {integrity: sha1-KJvaSi9sXrsySOLjBdUs8Mc8udU=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-menu/download/rc-menu-9.0.14.tgz}
+    name: rc-menu
+    version: 9.0.14
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-motion: rg.cnpmjs.org/rc-motion/2.4.4
+      rc-overflow: rg.cnpmjs.org/rc-overflow/1.2.2
+      rc-trigger: rg.cnpmjs.org/rc-trigger/5.2.10
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+      shallowequal: rg.cnpmjs.org/shallowequal/1.1.0
+    dev: true
+
+  rg.cnpmjs.org/rc-motion/2.4.4:
+    resolution: {integrity: sha1-6ZXV+iT8kwZcJPcUhXzyZ31lW7A=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-motion/download/rc-motion-2.4.4.tgz}
+    name: rc-motion
+    version: 2.4.4
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-notification/4.5.7:
+    resolution: {integrity: sha1-Jl5uagwaD6xj1qvU2DLrj/MVIvE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-notification/download/rc-notification-4.5.7.tgz}
+    name: rc-notification
+    version: 4.5.7
+    engines: {node: '>=8.x'}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-motion: rg.cnpmjs.org/rc-motion/2.4.4
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-overflow/1.2.2:
+    resolution: {integrity: sha1-lbAiIBbAzb3A24X1acJi53BqXyI=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-overflow/download/rc-overflow-1.2.2.tgz}
+    name: rc-overflow
+    version: 1.2.2
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-resize-observer: rg.cnpmjs.org/rc-resize-observer/1.1.2
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-pagination/3.1.14:
+    resolution: {integrity: sha512-tcugvxrtPiVU00Uh0IwC8NIUlxa4KtA9pXcaMNJdSHeO2uQqVkHEwllsULTAWRF3zRV2ozo2weP/DRKIUrX+Zg==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-pagination/download/rc-pagination-3.1.14.tgz}
+    name: rc-pagination
+    version: 3.1.14
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+    dev: true
+
+  rg.cnpmjs.org/rc-picker/2.5.19:
+    resolution: {integrity: sha1-c9B1RvrDmS8L+r8niWVKyto55G8=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-picker/download/rc-picker-2.5.19.tgz}
+    name: rc-picker
+    version: 2.5.19
+    engines: {node: '>=8.x'}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      date-fns: rg.cnpmjs.org/date-fns/2.27.0
+      dayjs: rg.cnpmjs.org/dayjs/1.10.7
+      moment: rg.cnpmjs.org/moment/2.29.1
+      rc-trigger: rg.cnpmjs.org/rc-trigger/5.2.10
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+      shallowequal: rg.cnpmjs.org/shallowequal/1.1.0
+    dev: true
+
+  rg.cnpmjs.org/rc-progress/3.1.4:
+    resolution: {integrity: sha1-ZgQND659jO0rOFiDeOzLKGS61hU=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-progress/download/rc-progress-3.1.4.tgz}
+    name: rc-progress
+    version: 3.1.4
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+    dev: true
+
+  rg.cnpmjs.org/rc-rate/2.9.1:
+    resolution: {integrity: sha1-5Dy5XE65CiweCxbsZhTYxDUwpzE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-rate/download/rc-rate-2.9.1.tgz}
+    name: rc-rate
+    version: 2.9.1
+    engines: {node: '>=8.x'}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-resize-observer/1.1.2:
+    resolution: {integrity: sha512-Qp+1x6D88FxyWBFRYP95IV9A1o0xlkC6qhiTX3YakE+o86QH9IzC7UVnltwmm4Q8uYH+E3F/HRmEiuxXJECdSw==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-resize-observer/download/rc-resize-observer-1.1.2.tgz}
+    name: rc-resize-observer
+    version: 1.1.2
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+      resize-observer-polyfill: rg.cnpmjs.org/resize-observer-polyfill/1.5.1
+    dev: true
+
+  rg.cnpmjs.org/rc-select/13.2.1:
+    resolution: {integrity: sha512-L2cJFAjVEeDiNVa/dlOVKE79OUb0J7sUBvWN3Viav3XHcjvv9Ovn4D8J9QhBSlDXeGuczZ81CZI3BbdHD25+Gg==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-select/download/rc-select-13.2.1.tgz}
+    name: rc-select
+    version: 13.2.1
+    engines: {node: '>=8.x'}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-motion: rg.cnpmjs.org/rc-motion/2.4.4
+      rc-overflow: rg.cnpmjs.org/rc-overflow/1.2.2
+      rc-trigger: rg.cnpmjs.org/rc-trigger/5.2.10
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+      rc-virtual-list: rg.cnpmjs.org/rc-virtual-list/3.4.2
+    dev: true
+
+  rg.cnpmjs.org/rc-slider/9.7.5:
+    resolution: {integrity: sha512-LV/MWcXFjco1epPbdw1JlLXlTgmWpB9/Y/P2yinf8Pg3wElHxA9uajN21lJiWtZjf5SCUekfSP6QMJfDo4t1hg==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-slider/download/rc-slider-9.7.5.tgz}
+    name: rc-slider
+    version: 9.7.5
+    engines: {node: '>=8.x'}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-tooltip: rg.cnpmjs.org/rc-tooltip/5.1.1
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+      shallowequal: rg.cnpmjs.org/shallowequal/1.1.0
+    dev: true
+
+  rg.cnpmjs.org/rc-steps/4.1.4:
+    resolution: {integrity: sha1-C6gtsgLVnKUtBpPcmIDdFFsZ3CM=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-steps/download/rc-steps-4.1.4.tgz}
+    name: rc-steps
+    version: 4.1.4
+    engines: {node: '>=8.x'}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-switch/3.2.2:
+    resolution: {integrity: sha1-0AH3fxJmTVJZW09vtCXdnmb7qOg=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-switch/download/rc-switch-3.2.2.tgz}
+    name: rc-switch
+    version: 3.2.2
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-table/7.19.2:
+    resolution: {integrity: sha512-NdpnoM50MK02H5/hGOsObfxCvGFUG5cHB9turE5BKJ81T5Ycbq193w5tLhnpILXe//Oanzr47MdMxkUnVGP+qg==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-table/download/rc-table-7.19.2.tgz}
+    name: rc-table
+    version: 7.19.2
+    engines: {node: '>=8.x'}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-resize-observer: rg.cnpmjs.org/rc-resize-observer/1.1.2
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+      shallowequal: rg.cnpmjs.org/shallowequal/1.1.0
+    dev: true
+
+  rg.cnpmjs.org/rc-tabs/11.10.5:
+    resolution: {integrity: sha512-DDuUdV6b9zGRYLtjI5hyejWLKoz1QiLWNgMeBzc3aMeQylZFhTYnFGdDc6HRqj5IYearNTsFPVSA+6VIT8g5cg==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-tabs/download/rc-tabs-11.10.5.tgz}
+    name: rc-tabs
+    version: 11.10.5
+    engines: {node: '>=8.x'}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-dropdown: rg.cnpmjs.org/rc-dropdown/3.2.0
+      rc-menu: rg.cnpmjs.org/rc-menu/9.0.14
+      rc-resize-observer: rg.cnpmjs.org/rc-resize-observer/1.1.2
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-textarea/0.3.6:
+    resolution: {integrity: sha512-6esiDE4AG3lqnmCdgAp/nutrZAqZEfRT3K749H8vMzNtxy9JScuMJ9MMtWN2DDQh+LCDvX4dgflaRjDCqtDHWw==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-textarea/download/rc-textarea-0.3.6.tgz}
+    name: rc-textarea
+    version: 0.3.6
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-resize-observer: rg.cnpmjs.org/rc-resize-observer/1.1.2
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-tooltip/5.1.1:
+    resolution: {integrity: sha1-lBeO0WLQJSvEmTtyX13CrA/M8VQ=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-tooltip/download/rc-tooltip-5.1.1.tgz}
+    name: rc-tooltip
+    version: 5.1.1
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      rc-trigger: rg.cnpmjs.org/rc-trigger/5.2.10
+    dev: true
+
+  rg.cnpmjs.org/rc-tree-select/4.8.0:
+    resolution: {integrity: sha512-evuVIF7GHCGDdvISdBWl4ZYmG/8foof/RDtzCu/WFLA1tFKZD77RRC3khEsjh4WgsB0vllLe7j+ODJ7jHRcDRQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-tree-select/download/rc-tree-select-4.8.0.tgz}
+    name: rc-tree-select
+    version: 4.8.0
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-select: rg.cnpmjs.org/rc-select/13.2.1
+      rc-tree: rg.cnpmjs.org/rc-tree/5.3.6
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-tree/5.3.6:
+    resolution: {integrity: sha512-X5cSLSX9WVL2gmOdsOzlkPy1ITljFsYVnJvrIColWBjT0LqEg6KwehWHVEAjeQVKKHDYrSnU2EDi3gT2eWJCNA==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-tree/download/rc-tree-5.3.6.tgz}
+    name: rc-tree
+    version: 5.3.6
+    engines: {node: '>=10.x'}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-motion: rg.cnpmjs.org/rc-motion/2.4.4
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+      rc-virtual-list: rg.cnpmjs.org/rc-virtual-list/3.4.2
+    dev: true
+
+  rg.cnpmjs.org/rc-trigger/5.2.10:
+    resolution: {integrity: sha1-igBXqUCxuQJ+qjO+7IpuzYXM4rE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-trigger/download/rc-trigger-5.2.10.tgz}
+    name: rc-trigger
+    version: 5.2.10
+    engines: {node: '>=8.x'}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-align: rg.cnpmjs.org/rc-align/4.0.11
+      rc-motion: rg.cnpmjs.org/rc-motion/2.4.4
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-upload/4.3.3:
+    resolution: {integrity: sha512-YoJ0phCRenMj1nzwalXzciKZ9/FAaCrFu84dS5pphwucTC8GUWClcDID/WWNGsLFcM97NqIboDqrV82rVRhW/w==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-upload/download/rc-upload-4.3.3.tgz}
+    name: rc-upload
+    version: 4.3.3
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/rc-util/5.16.1:
+    resolution: {integrity: sha512-kSCyytvdb3aRxQacS/71ta6c+kBWvM1v8/2h9d/HaNWauc3qB8pLnF20PJ8NajkNN8gb+rR1l0eWO+D4Pz+LLQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-util/download/rc-util-5.16.1.tgz}
+    name: rc-util
+    version: 5.16.1
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': rg.cnpmjs.org/@babel/runtime/7.16.5
+      react-is: rg.cnpmjs.org/react-is/16.13.1
+      shallowequal: rg.cnpmjs.org/shallowequal/1.1.0
+    dev: true
+
+  rg.cnpmjs.org/rc-virtual-list/3.4.2:
+    resolution: {integrity: sha1-EHgyeqcjC15FbWee0s6Z88A269E=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/rc-virtual-list/download/rc-virtual-list-3.4.2.tgz}
+    name: rc-virtual-list
+    version: 3.4.2
+    engines: {node: '>=8.x'}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      classnames: rg.cnpmjs.org/classnames/2.3.1
+      rc-resize-observer: rg.cnpmjs.org/rc-resize-observer/1.1.2
+      rc-util: rg.cnpmjs.org/rc-util/5.16.1
+    dev: true
+
+  rg.cnpmjs.org/react-is/16.13.1:
+    resolution: {integrity: sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/react-is/download/react-is-16.13.1.tgz}
+    name: react-is
+    version: 16.13.1
+    dev: true
+
+  rg.cnpmjs.org/readdirp/3.6.0:
+    resolution: {integrity: sha1-dKNwvYVxFuJFspzJc0DNQxoCpsc=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/readdirp/download/readdirp-3.6.0.tgz}
+    name: readdirp
+    version: 3.6.0
+    engines: {node: '>=8.10.0'}
+    dependencies:
+      picomatch: rg.cnpmjs.org/picomatch/2.3.0
+    dev: true
+
+  rg.cnpmjs.org/regenerator-runtime/0.13.9:
+    resolution: {integrity: sha1-iSV0Kpj/2QgUmI11Zq0wyjsmO1I=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/regenerator-runtime/download/regenerator-runtime-0.13.9.tgz}
+    name: regenerator-runtime
+    version: 0.13.9
+    dev: true
+
+  rg.cnpmjs.org/resize-observer-polyfill/1.5.1:
+    resolution: {integrity: sha1-DpAg3T0hAkRY1OvSfiPkAmmBBGQ=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/resize-observer-polyfill/download/resize-observer-polyfill-1.5.1.tgz}
+    name: resize-observer-polyfill
+    version: 1.5.1
+    dev: true
+
+  rg.cnpmjs.org/safe-buffer/5.1.2:
+    resolution: {integrity: sha1-mR7GnSluAxN0fVm9/St0XDX4go0=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/safe-buffer/download/safe-buffer-5.1.2.tgz}
+    name: safe-buffer
+    version: 5.1.2
+    dev: true
+
+  rg.cnpmjs.org/safe-buffer/5.2.1:
+    resolution: {integrity: sha1-Hq+fqb2x/dTsdfWPnNtOa3gn7sY=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/safe-buffer/download/safe-buffer-5.2.1.tgz}
+    name: safe-buffer
+    version: 5.2.1
+    dev: true
+
+  rg.cnpmjs.org/safer-buffer/2.1.2:
+    resolution: {integrity: sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/safer-buffer/download/safer-buffer-2.1.2.tgz}
+    name: safer-buffer
+    version: 2.1.2
+
+  rg.cnpmjs.org/sax/1.2.4:
+    resolution: {integrity: sha1-KBYjTiN4vdxOU1T6tcqold9xANk=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/sax/download/sax-1.2.4.tgz}
+    name: sax
+    version: 1.2.4
+    dev: false
+    optional: true
+
+  rg.cnpmjs.org/scroll-into-view-if-needed/2.2.28:
+    resolution: {integrity: sha1-WhWy9YpSZCyIyOylhGROAXA9ZFo=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/scroll-into-view-if-needed/download/scroll-into-view-if-needed-2.2.28.tgz}
+    name: scroll-into-view-if-needed
+    version: 2.2.28
+    dependencies:
+      compute-scroll-into-view: rg.cnpmjs.org/compute-scroll-into-view/1.0.17
+    dev: true
+
+  rg.cnpmjs.org/semver/5.7.1:
+    resolution: {integrity: sha1-qVT5Ma66UI0we78Gnv8MAclhFvc=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/semver/download/semver-5.7.1.tgz}
+    name: semver
+    version: 5.7.1
+    hasBin: true
+    dev: false
+    optional: true
+
+  rg.cnpmjs.org/semver/6.3.0:
+    resolution: {integrity: sha1-7gpkyK9ejO6mdoexM3YeG+y9HT0=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/semver/download/semver-6.3.0.tgz}
+    name: semver
+    version: 6.3.0
+    hasBin: true
+    dev: true
+
+  rg.cnpmjs.org/send/0.17.2:
+    resolution: {integrity: sha512-UJYB6wFSJE3G00nEivR5rgWp8c2xXvJ3OPWPhmuteU0IKj8nKbG3DrjiOmLwpnHGYWAVwA69zmTm++YG0Hmwww==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/send/download/send-0.17.2.tgz}
+    name: send
+    version: 0.17.2
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      debug: rg.cnpmjs.org/debug/2.6.9
+      depd: rg.cnpmjs.org/depd/1.1.2
+      destroy: rg.cnpmjs.org/destroy/1.0.4
+      encodeurl: rg.cnpmjs.org/encodeurl/1.0.2
+      escape-html: rg.cnpmjs.org/escape-html/1.0.3
+      etag: rg.cnpmjs.org/etag/1.8.1
+      fresh: rg.cnpmjs.org/fresh/0.5.2
+      http-errors: rg.cnpmjs.org/http-errors/1.8.1
+      mime: rg.cnpmjs.org/mime/1.6.0
+      ms: rg.cnpmjs.org/ms/2.1.3
+      on-finished: rg.cnpmjs.org/on-finished/2.3.0
+      range-parser: rg.cnpmjs.org/range-parser/1.2.1
+      statuses: rg.cnpmjs.org/statuses/1.5.0
+    dev: true
+
+  rg.cnpmjs.org/serve-static/1.14.2:
+    resolution: {integrity: sha512-+TMNA9AFxUEGuC0z2mevogSnn9MXKb4fa7ngeRMJaaGv8vTwnIEkKi+QGvPt33HSnf8pRS+WGM0EbMtCJLKMBQ==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/serve-static/download/serve-static-1.14.2.tgz}
+    name: serve-static
+    version: 1.14.2
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      encodeurl: rg.cnpmjs.org/encodeurl/1.0.2
+      escape-html: rg.cnpmjs.org/escape-html/1.0.3
+      parseurl: rg.cnpmjs.org/parseurl/1.3.3
+      send: rg.cnpmjs.org/send/0.17.2
+    dev: true
+
+  rg.cnpmjs.org/setprototypeof/1.2.0:
+    resolution: {integrity: sha1-ZsmiSnP5/CjL5msJ/tPTPcrxtCQ=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/setprototypeof/download/setprototypeof-1.2.0.tgz}
+    name: setprototypeof
+    version: 1.2.0
+    dev: true
+
+  rg.cnpmjs.org/shallowequal/1.1.0:
+    resolution: {integrity: sha1-GI1SHelbkIdAT9TctosT3wrk5/g=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/shallowequal/download/shallowequal-1.1.0.tgz}
+    name: shallowequal
+    version: 1.1.0
+    dev: true
+
+  rg.cnpmjs.org/source-map/0.5.7:
+    resolution: {integrity: sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/source-map/download/source-map-0.5.7.tgz}
+    name: source-map
+    version: 0.5.7
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  rg.cnpmjs.org/source-map/0.6.1:
+    resolution: {integrity: sha1-dHIq8y6WFOnCh6jQu95IteLxomM=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/source-map/download/source-map-0.6.1.tgz}
+    name: source-map
+    version: 0.6.1
+    engines: {node: '>=0.10.0'}
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  rg.cnpmjs.org/statuses/1.5.0:
+    resolution: {integrity: sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/statuses/download/statuses-1.5.0.tgz}
+    name: statuses
+    version: 1.5.0
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  rg.cnpmjs.org/string-convert/0.2.1:
+    resolution: {integrity: sha1-aYLMMEn7tM2F+LJFaLnZvznu/5c=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/string-convert/download/string-convert-0.2.1.tgz}
+    name: string-convert
+    version: 0.2.1
+    dev: true
+
+  rg.cnpmjs.org/supports-color/5.5.0:
+    resolution: {integrity: sha1-4uaaRKyHcveKHsCzW2id9lMO/I8=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/supports-color/download/supports-color-5.5.0.tgz}
+    name: supports-color
+    version: 5.5.0
+    engines: {node: '>=4'}
+    dependencies:
+      has-flag: rg.cnpmjs.org/has-flag/3.0.0
+    dev: true
+
+  rg.cnpmjs.org/svg-tags/1.0.0:
+    resolution: {integrity: sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/svg-tags/download/svg-tags-1.0.0.tgz}
+    name: svg-tags
+    version: 1.0.0
+    dev: true
+
+  rg.cnpmjs.org/to-fast-properties/2.0.0:
+    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/to-fast-properties/download/to-fast-properties-2.0.0.tgz}
+    name: to-fast-properties
+    version: 2.0.0
+    engines: {node: '>=4'}
+    dev: true
+
+  rg.cnpmjs.org/to-regex-range/5.0.1:
+    resolution: {integrity: sha1-FkjESq58jZiKMmAY7XL1tN0DkuQ=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/to-regex-range/download/to-regex-range-5.0.1.tgz}
+    name: to-regex-range
+    version: 5.0.1
+    engines: {node: '>=8.0'}
+    dependencies:
+      is-number: rg.cnpmjs.org/is-number/7.0.0
+    dev: true
+
+  rg.cnpmjs.org/toggle-selection/1.0.6:
+    resolution: {integrity: sha1-bkWxJj8gF/oKzH2J14sVuL932jI=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/toggle-selection/download/toggle-selection-1.0.6.tgz}
+    name: toggle-selection
+    version: 1.0.6
+    dev: true
+
+  rg.cnpmjs.org/toidentifier/1.0.1:
+    resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/toidentifier/download/toidentifier-1.0.1.tgz}
+    name: toidentifier
+    version: 1.0.1
+    engines: {node: '>=0.6'}
+    dev: true
+
+  rg.cnpmjs.org/tslib/2.3.1:
+    resolution: {integrity: sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/tslib/download/tslib-2.3.1.tgz}
+    name: tslib
+    version: 2.3.1
+    dev: false
+
+  rg.cnpmjs.org/type-is/1.6.18:
+    resolution: {integrity: sha1-TlUs0F3wlGfcvE73Od6J8s83wTE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/type-is/download/type-is-1.6.18.tgz}
+    name: type-is
+    version: 1.6.18
+    engines: {node: '>= 0.6'}
+    dependencies:
+      media-typer: rg.cnpmjs.org/media-typer/0.3.0
+      mime-types: rg.cnpmjs.org/mime-types/2.1.34
+    dev: true
+
+  rg.cnpmjs.org/unpipe/1.0.0:
+    resolution: {integrity: sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/unpipe/download/unpipe-1.0.0.tgz}
+    name: unpipe
+    version: 1.0.0
+    engines: {node: '>= 0.8'}
+    dev: true
+
+  rg.cnpmjs.org/util/0.10.4:
+    resolution: {integrity: sha1-OqASW/5mikZy3liFfTrOJ+y3aQE=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/util/download/util-0.10.4.tgz}
+    name: util
+    version: 0.10.4
+    dependencies:
+      inherits: rg.cnpmjs.org/inherits/2.0.3
+    dev: true
+
+  rg.cnpmjs.org/utils-merge/1.0.1:
+    resolution: {integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/utils-merge/download/utils-merge-1.0.1.tgz}
+    name: utils-merge
+    version: 1.0.1
+    engines: {node: '>= 0.4.0'}
+    dev: true
+
+  rg.cnpmjs.org/vary/1.1.2:
+    resolution: {integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/vary/download/vary-1.1.2.tgz}
+    name: vary
+    version: 1.1.2
+    engines: {node: '>= 0.8'}
+    dev: true
+
+  rg.cnpmjs.org/warning/4.0.3:
+    resolution: {integrity: sha1-Fungd+uKhtavfWSqHgX9hbRnjKM=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/warning/download/warning-4.0.3.tgz}
+    name: warning
+    version: 4.0.3
+    dependencies:
+      loose-envify: rg.cnpmjs.org/loose-envify/1.4.0
+    dev: true
+
+  rg.cnpmjs.org/watch/1.0.2:
+    resolution: {integrity: sha1-NApxe952Vyb6CqB9ch4BR6VR3ww=, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/watch/download/watch-1.0.2.tgz}
+    name: watch
+    version: 1.0.2
+    engines: {node: '>=0.1.95'}
+    hasBin: true
+    dependencies:
+      exec-sh: rg.cnpmjs.org/exec-sh/0.2.2
+      minimist: rg.cnpmjs.org/minimist/1.2.5
+    dev: true
+
+  rg.cnpmjs.org/ws/7.5.6:
+    resolution: {integrity: sha512-6GLgCqo2cy2A2rjCNFlxQS6ZljG/coZfZXclldI8FB/1G3CCI36Zd8xy2HrFVACi8tfk5XrgLQEk+P0Tnz9UcA==, registry: https://r.cnpmjs.org/, tarball: https://rg.cnpmjs.org/ws/download/ws-7.5.6.tgz}
+    name: ws
+    version: 7.5.6
+    engines: {node: '>=8.3.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+    dev: true

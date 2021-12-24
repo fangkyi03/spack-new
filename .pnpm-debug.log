@@ -1,0 +1,16 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "fileName": "/Users/lv/Desktop/spack-new/package.json",
+    "codeFrame": "\u001b[0m \u001b[90m 31 |\u001b[39m     \u001b[32m\"prettier\"\u001b[39m\u001b[33m:\u001b[39m\u001b[32m\"^2.5.1\"\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m   }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 34 |\u001b[39m\u001b[0m",
+    "code": "ERR_PNPM_JSON_PARSE",
+    "err": {
+      "name": "pnpm",
+      "message": "Unexpected token \"}\" (0x7D) in JSON at position 835 while parsing near \"...tier\\\":\\\"^2.5.1\\\"\\n  },\\n}\\n\" in /Users/lv/Desktop/spack-new/package.json \n\n\u001b[0m \u001b[90m 31 |\u001b[39m     \u001b[32m\"prettier\"\u001b[39m\u001b[33m:\u001b[39m\u001b[32m\"^2.5.1\"\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m   }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 34 |\u001b[39m\u001b[0m\n",
+      "code": "ERR_PNPM_JSON_PARSE",
+      "stack": "pnpm: Unexpected token \"}\" (0x7D) in JSON at position 835 while parsing near \"...tier\\\":\\\"^2.5.1\\\"\\n  },\\n}\\n\" in /Users/lv/Desktop/spack-new/package.json \n\n\u001b[0m \u001b[90m 31 |\u001b[39m     \u001b[32m\"prettier\"\u001b[39m\u001b[33m:\u001b[39m\u001b[32m\"^2.5.1\"\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m   }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 34 |\u001b[39m\u001b[0m\n\n    at parseJson (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:3116:27)\n    at readJsonFile (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:41040:42)\n    at async Object.tryReadProjectManifest (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:41101:32)\n    at async tryReadProjectManifest (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:41319:60)\n    at async handler (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:117134:48)\n    at async /usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:133927:20\n    at async run (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:133902:34)\n    at async runPnpm (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:134113:5)\n    at async /usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:134105:7"
+    }
+  }
+}
