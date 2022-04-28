@@ -13,7 +13,7 @@ export default {
   render(h) {
     return (
       <div>
-        <van-button>测试</van-button>
+      1231
       </div>
     );
   },

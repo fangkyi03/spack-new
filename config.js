@@ -16,10 +16,10 @@ module.exports = {
   mode:'build',
   depend:{
     'antd':{
-      'js':'https://cdn.bootcdn.net/ajax/libs/antd/4.7.0/antd.min.js',
-      'css':'https://cdn.bootcdn.net/ajax/libs/antd/4.7.0/antd.min.css'
+      'js':'https://unpkg.com/antd@4.20.1/dist/antd.min.js',
+      'css':'https://unpkg.com/antd@4.20.1/dist/antd.min.css',
     },
-    'dayjs':'https://cdn.bootcdn.net/ajax/libs/dayjs/1.4.1/dayjs.min.js',
-    'moment':'https://cdn.bootcdn.net/ajax/libs/moment.js/1.0.0/moment.min.js'
+    'dayjs':'https://unpkg.com/dayjs@1.11.1/dayjs.min.js',
+    'moment':'https://unpkg.com/moment@2.29.3/moment.js'
   }
 }

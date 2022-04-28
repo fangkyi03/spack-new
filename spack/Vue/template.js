@@ -28,14 +28,6 @@ function getVueEmptyHTMLTemplate(isBuild = true, dirPath) {
       <meta charset="UTF-8">
       <title>${title}</title>
       <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-      <link rel="stylesheet" href="http://at.alicdn.com/t/font_2203899_y90swz4cdz.css"/>
-      <script crossorigin src="https://cdn.bootcdn.net/ajax/libs/react/16.14.0/umd/react.production.min.js"></script>
-      <script crossorigin src="https://cdn.bootcdn.net/ajax/libs/react-dom/16.14.0/umd/react-dom.production.min.js"></script>
-      <script src="https://cdn.bootcdn.net/ajax/libs/moment.js/1.0.0/moment.min.js"></script>
-      <script src="https://cdn.bootcdn.net/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
-      <script src="https://cdn.bootcdn.net/ajax/libs/moment.js/2.29.1/locale/zh-cn.min.js"></script>
-      <script src="https://cdn.bootcdn.net/ajax/libs/antd/4.7.3/antd.min.js"></script>
-      <link href="https://cdn.bootcdn.net/ajax/libs/antd/4.7.3/antd.min.css" rel="stylesheet">
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/vant@2.10/lib/index.css"
@@ -59,7 +51,7 @@ function getVueEmptyHTMLTemplate(isBuild = true, dirPath) {
 // 注入前
 function getBeforeInjection() {
     return [
-        '<script src="https://cdn.jsdelivr.net/npm/vue"></script>', 
+        '<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>', 
         '<script src="https://cdn.jsdelivr.net/npm/vant@2.10/lib/vant.min.js"></script>'
     ].join('\n')
 }
