@@ -10,10 +10,15 @@ export default {
       return <input value={this.inputValue} />;
     },
   },
-  render(h) {
+  render() {
     return (
       <div>
-      1231
+        <van-button>测试</van-button>
+        <van-cell-group>
+          <van-cell title="单元格111" value={'ceasa'}>
+          </van-cell>
+          <van-cell title="单元格" value="内容" label="描述信息" />
+        </van-cell-group>
       </div>
     );
   },

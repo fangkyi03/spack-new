@@ -11,7 +11,7 @@
 module.exports = {
   rootPath:'src/pages',
   outPath:'dist',
-  port:8000,
+  port:80,
   // isOpen:true,
   mode:'build',
   depend:{
