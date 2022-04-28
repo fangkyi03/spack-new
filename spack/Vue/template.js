@@ -30,7 +30,7 @@ function getVueEmptyHTMLTemplate(isBuild = true, dirPath) {
       <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
       <link
         rel="stylesheet"
-        href="https://unpkg.com/vant@2.10.14/lib/index.css"
+        href="https://cdn.staticfile.org/vant/2.12.5/index.min.css"
       />
       <link rel="icon" href="data:image/ico;base64,aWNv">
       %%%before_injection%%%
@@ -51,8 +51,8 @@ function getVueEmptyHTMLTemplate(isBuild = true, dirPath) {
 // 注入前
 function getBeforeInjection() {
     return [
-        '<script src="https://unpkg.com/vue@2.6.0/dist/vue.js"></script>', 
-        '<script src="https://unpkg.com/vant@2.10.14/lib/index.js"></script>'
+        '<script src="https://cdn.staticfile.org/vue/2.6.0/vue.min.js"></script>', 
+        '<script src="https://cdn.staticfile.org/vant/2.12.5/vant.min.js"></script>'
     ].join('\n')
 }
 
